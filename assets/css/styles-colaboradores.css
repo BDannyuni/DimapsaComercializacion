@@ -1,0 +1,416 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Asegurando que no haya desbordamiento en el body */
+body {
+    overflow-x: hidden;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #171C26;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.logo a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Asegura que el color del enlace herede el color del texto del logo */
+}
+
+.logo a:hover {
+    text-decoration: none; /* Mantiene sin subrayado al pasar el ratón por encima */
+}
+
+.logo h1 {
+    color: white;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s, color 0.3s, padding 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: white;
+    color: #171C26;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+}
+
+.whatsapp-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 1175px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #171C26;
+    }
+    
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Hero\ -\ copia.png');
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start; /* Cambiado para alinear el contenido a la izquierda */
+    color: white;
+    text-align: left; /* Cambiado para alinear el texto a la izquierda */
+    padding-left: 120px; /* Espacio a la izquierda para el contenido */
+}
+
+
+.hero h1 {
+    font-size: 5rem;
+    margin: 0;
+    margin-top: 50px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 15px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-blue {
+    background-color: #05044A;
+}
+
+.btn-blue:hover{
+    background-color: #4A0404;
+}
+
+.btn-red {
+    background-color: #4A0404;
+}
+.btn-red:hover{
+    background-color: #05044A;
+}
+
+/* Media Queries para hacer el hero responsive */
+
+@media (max-width: 878px) {
+    .hero {
+        align-items: flex-start; /* Mantener el contenido en la parte superior */
+        justify-content: center; /* Alinear contenido en el centro horizontalmente */
+        text-align: center; /* Centrar el texto */
+        padding: 20px; /* Reducir el padding */
+    }
+
+    .hero-content {
+        max-width: 90%; /* Asegurar que el contenido no se salga de la pantalla */
+        margin-top: 20px; /* Añadir margen superior para separar del borde superior */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Reducir el tamaño del texto */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Reducir el tamaño del texto */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Reducir el tamaño del texto del botón */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem; /* Reducir aún más el tamaño del texto */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Reducir aún más el tamaño del texto */
+    }
+
+    .btn {
+        padding: 8px 16px; /* Reducir el padding del botón */
+        font-size: 0.8rem; /* Reducir el tamaño del texto del botón */
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+.collaborators {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+.collaborator img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    max-height: 150px; /* Ajusta la altura máxima */
+}
+@media (max-width: 1200px) {
+    .collaborators {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 992px) {
+    .collaborators {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .collaborators {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 576px) {
+    .collaborators {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+.image-container img {
+    max-width: 90%;
+    max-height: 100%;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.swiper-container {
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    overflow: hidden; /* Ocultar los logos que se desplazan */
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    width: 200px; /* Ajusta el tamaño de los logos */
+    height: auto;
+    margin: 0 15px; /* Añadir márgenes laterales para evitar que se vean al principio y al final */
+}
+h2 {
+    margin-top: 50px;
+    font-size: 2.5rem;
+}
+h2 .highlight {
+    color: #B71901;
+}
+.underline {
+    width: 200px; /* Ajusta el ancho de la línea según sea necesario */
+    height: 4px;
+    background-color: #B71901;
+    margin: 10px auto 0; /* Centra la línea y ajusta el margen */
+}
+
+
+footer {
+    background-color: #171C26;
+    color: white;
+    padding: 20px 0;
+}
+.footer-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #171C26;
+    padding-bottom: 20px;
+}
+.footer-column {
+    flex: 1;
+    margin: 20px;
+    min-width: 200px;
+    text-align: right; /* Alinea el texto a la derecha */
+}
+.footer-column h3 {
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.footer-column h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #B71901;
+    position: absolute;
+    right: -10; /* Alinea la línea a la derecha */
+    bottom: -5px;
+}
+.footer-column p, .footer-column a {
+    color: #CCCCCC;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer-column a {
+    position: relative; /* Necesario para colocar el triángulo */
+    padding-left: 20px; /* Espacio para el triángulo */
+}
+.footer-column a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #B71901; /* Color del triángulo */
+}
+
+.footer-column a:hover {
+    color: #B71901;
+}
+
+
+/* Eliminar triángulo de los enlaces de redes sociales */
+.redes .links-redes {
+    position: relative; /* Necesario para colocar el triángulo */
+    padding: 10px; /* Espacio para el triángulo */
+}
+
+.redes .links-redes::before {
+    content: none; /* Elimina el triángulo */
+}
+
+.footer-column h4 {
+    color: #B71901;
+    margin-top: 20px;
+    position: relative;
+}
+.footer-column h4::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #B71901;
+    position: absolute;
+    right: 0; /* Alinea la línea a la derecha */
+    bottom: -5px;
+}
+.footer-bottom {
+    background-color: #171C26;
+    color: #CCCCCC;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 3px solid #fff;
+}
+.footer-bottom a {
+    color: #B71901;
+    text-decoration: none;
+}
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start; /* Alinea los elementos al principio del contenedor en móviles */
+        text-align: center; /* Centra el texto a la izquierda en dispositivos móviles */
+    }
+    .footer-column {
+        text-align: center; /* Alinea el texto a la izquierda en dispositivos móviles */
+        margin: 10px 15px; /* Ajusta el margen para móviles */
+        position: static; /* Elimina el posicionamiento absoluto para móviles */
+    }
+    .footer-column h3::after, .footer-column h4::after {
+        left: 0; /* Alinea la línea decorativa a la izquierda en dispositivos móviles */
+        right: auto; /* Restablece el alineamiento de la línea decorativa en móviles */
+        transform: none; /* Elimina el centrado de la línea decorativa */
+    }
+}
