@@ -241,7 +241,7 @@
         "brand": "INFAB",
         "material": "Líquido",
         "description": "Limpiador para climas tipo SERPENTIKLEEN",
-        "images": ["assets/img/productos/info/SERPENTIKLEEN.jpg"],
+        "images": ["assets/img/productos/info/SERPENTIKLEEN.JPG"],
         "brandLogo": "",
         "specifications": {
         "headers": ["Código", "Tipo", "Empaque"],
@@ -934,4 +934,5 @@
 
 
 ]
+
 
