@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimapsa - Productos</title>
+    <link rel="stylesheet" href="assets/css/productos.css">
+    <!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/diseo_de_maquinas_y_proyectos_s_a_de_c_v_logo.jpg">
+</head>
+<body>
+    <!-- BARRA DE NAVEGACIÓN -->
+   <nav class="navbar">
+    <div class="logo-container">
+        <a href="index.html" class="logo">
+            <img src="assets/img/diseo_de_maquinas_y_proyectos_s_a_de_c_v_logo.jpg" height="55px" alt="">
+            
+        </a>
+    </div>
+
+    <div class="search-container">
+        <form id="search-form" onsubmit="handleSearch(event)">
+            <input type="text" id="search-input" placeholder="Buscar Productos..." oninput="searchProducts()" autocomplete="off">
+            <button type="button" class="clear-button" onclick="clearInput()" style="display: none;">&times;</button>
+            <button type="submit" class="search-button">
+                <img src="assets/img/search.png" alt="Buscar" width="20">
+            </button>
+        </form>
+        <div id="autocomplete-list" class="autocomplete-items"></div>
+    </div>
+
+    
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="marcas.html">Marcas</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=528182800775&text=Hola%21%20Quisiera%20más%20información%20sobre%20DIMAPSA%20Comercialización.">Contactanos</a></li> 
+        <li><a href="../index.html">Dimapsa</a></li>
+    </ul>
+    <div class="menu-icon">
+        <span>&#9776;</span>
+    </div>
+</nav> <!-- FIN DE BARRA DE NAVEGACIÓN -->
+
+    <!-- INICIO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 id="text-hero">Bienvenido a nuestra<br> Sección de Productos</h2>
+        </div>
+    </section> <!-- FIN DE INICIO -->
+
+    <div class="container-products">
+        <aside class="filters">
+            <h2>Filtros</h2>
+            <div class="filter-section">
+                <h3>Precio Maximo: $<span id="precio-maximo">10000</span></h3>
+                <input type="range" id="precio-slider" min="5" max="10000" value="10000">
+            </div>
+            <div class="filter-section">
+                <h3>Marca</h3>
+                <div id="marca-filtro"></div>
+            </div>
+            <div class="filter-section">
+                <h3>Material</h3>
+                <div id="material-filtro"></div>
+            </div>
+        </aside>
+        <main>
+            <div class="pagination-controls">
+                <label for="productos-por-pagina">Productos por página:</label>
+                <select id="productos-por-pagina">
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="200">Todos</option>
+                </select>
+            </div>
+            <h1>Nuestros Productos</h1>
+            <div id="productos-grid" class="productos-grid"></div> <br><br>
+            <div id="paginacion"></div>
+        </main>
+    </div>
+
+       <!-- NUESTROS COLABORADORES -->
+    <section>
+        <div class="container">
+            <div class="header">
+                <h2><span class="highlight">MAR</span>CAS</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="collaborator">
+                        <img src="assets/img/logos/yesera.jpg" alt="yesera" onclick="redirigirConFiltro('yesera')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/crest.png" alt="crest" onclick="redirigirConFiltro('crest')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/berel.png" alt="berel" onclick="redirigirConFiltro('berel')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/austromex.png" alt="austromex" onclick="redirigirConFiltro('austromex')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/rotoplas.jpg" alt="rotoplas" onclick="redirigirConFiltro('rotoplas')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/anclo.avif" alt="anclo" onclick="redirigirConFiltro('anclo')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/fandeli.png" alt="fandeli" onclick="redirigirConFiltro('fandeli')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/truper.png" alt="truper" onclick="redirigirConFiltro('truper')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/pennsylvania.png" alt="pennsylvania" onclick="redirigirConFiltro('pennsylvania')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/bticino.png" alt="bticino" onclick="redirigirConFiltro('bticino')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/wd40.svg" alt="wd40" onclick="redirigirConFiltro('wd40')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/oatey.webp" alt="oatey" onclick="redirigirConFiltro('oatey')">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- FIN DE NUESTROS COLABORADORES -->
+
+
+
+    <br><br><br>
+    <!-- FOOTER -->
+     <section>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column" style="text-align: left;">
+                    <h3>Contacto</h3>
+                    <p>home@dimapsa.com</p>
+                    <p>+52 81 8280 0775</p><br>
+                    <div class="redes">
+                        <a class="links-redes" href="https://www.facebook.com/people/Dimapsa/100083670967311/?ref=page_internal"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a class="links-redes" href="https://www.instagram.com/dimapsa.sa.cv/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a class="links-redes" href="https://www.linkedin.com/company/dise%C3%B1o-de-maquinas-y-proyectos-s-a-de-c-v/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column" style="text-align: left;">
+                    <h3>Dirección</h3>
+                    <p>José Ma. Bocanegra No.1313</p>
+                    <p>Col. Industrial, Monterrey, N.L., México</p><br>
+                    <h3>Horario</h3>
+                    <p>LUN a VIE: 7AM a 5PM</p>
+                </div>
+                <div class="footer-column" style="text-align: left;">
+                    <h3>Páginas</h3>
+                    <p><a href="index.html">Inicio</a></p>
+                    <p><a href="productos.html">Productos</a></p>
+                    <p><a href="marcas.html">Marcas</a></p>
+                    <p><a href="https://api.whatsapp.com/send?phone=528182800775&text=Hola%21%20Quisiera%20más%20información%20sobre%20DIMAPSA%20Comercialización.">Contactanos</a></p>
+                    <p><a href="../index.html">Dimapsa</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2026 - <a href="#">DIMAPSA</a>. All Rights Reserved.</p>
+                <p>Desarrollado por - <a href="https://www.linkedin.com/in/brandon-alvarez-hdz/">Brandon Alvarez</a></p>
+            </div>
+        </footer>
+    </section> <!-- FIN DE FOOTER -->
+
+    <!-- SCRIPTS -->
+    <script src="assets/scripts/scripts.js"></script>
+    <!-- Link to Swiper's JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        function redirigirConFiltro(marca) {
+            // Redirigir a productos.html con la marca en los parámetros de la URL
+            window.location.href = `productos.html?marca=${encodeURIComponent(marca)}`;
+        }
+    </script>
+    <script>
+       var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 4,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                640: {
+                    slidesPerView: 2,
+                },
+                320: {
+                    slidesPerView: 1,
+                }
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuIcon.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+        });
+    </script> <!-- FIN DE SCRIPTS -->
+
+    <script>
+        let productos = [];
+        let precioMaximo = 10000;
+        let marcasSeleccionadas = [];
+        let materialesSeleccionados = [];
+        let productosPorPagina = 15; // Valor inicial
+        let paginaActual = 1;
+
+        const precioSlider = document.getElementById('precio-slider');
+        const precioMaximoSpan = document.getElementById('precio-maximo');
+        const marcaFiltro = document.getElementById('marca-filtro');
+        const materialFiltro = document.getElementById('material-filtro');
+        const productosGrid = document.getElementById('productos-grid');
+        const paginacion = document.getElementById('paginacion');
+        const productosPorPaginaSelect = document.getElementById('productos-por-pagina');
+
+        async function cargarProductos() {
+            try {
+                const response = await fetch('assets/scripts/productos.json');
+                productos = await response.json();
+                inicializarFiltros();
+                actualizarProductos();
+            } catch (error) {
+                console.error('Error al cargar los productos:', error);
+            }
+        }
+
+        function inicializarFiltros() {
+            // Limpiar los filtros anteriores
+            marcaFiltro.innerHTML = '';
+            materialFiltro.innerHTML = ''; // Limpiar los filtros de materiales también
+
+            const marcas = [...new Set(productos.map(p => p.brand))];
+            const materiales = [...new Set(productos.map(p => p.material))];
+
+            // Agregar filtros de marca
+            marcas.forEach(marca => {
+                const marcaElement = document.createElement('div');
+                marcaElement.className = 'filtro-checkbox';
+                marcaElement.innerHTML = `
+                    <input type="checkbox" id="marca-${marca}" value="${marca}">
+                    <label for="marca-${marca}">${marca}</label>
+                `;
+                marcaFiltro.appendChild(marcaElement);
+            });
+
+            // Agregar filtros de material
+            materiales.forEach(material => {
+                const materialElement = document.createElement('div');
+                materialElement.className = 'filtro-checkbox';
+                materialElement.innerHTML = `
+                    <input type="checkbox" id="material-${material}" value="${material}">
+                    <label for="material-${material}">${material}</label>
+                `;
+                materialFiltro.appendChild(materialElement);
+            });
+        }
+
+
+
+        function actualizarProductos() {
+            const productosFiltrados = productos.filter(producto => {
+                const precio = parseFloat(producto.price.split(' - ')[0].replace('$', ''));
+                return precio <= precioMaximo &&
+                    (marcasSeleccionadas.length === 0 || marcasSeleccionadas.includes(producto.brand)) &&
+                    (materialesSeleccionados.length === 0 || materialesSeleccionados.includes(producto.material));
+            });
+
+            const totalPaginas = Math.ceil(productosFiltrados.length / productosPorPagina);
+            paginaActual = Math.min(paginaActual, totalPaginas);
+
+            const inicio = (paginaActual - 1) * productosPorPagina;
+            const productosPagina = productosFiltrados.slice(inicio, inicio + productosPorPagina);
+
+            productosGrid.innerHTML = '';
+            productosPagina.forEach(producto => {
+                const productoElement = document.createElement('div');
+                productoElement.className = 'producto-card';
+                productoElement.setAttribute('onclick', `viewProductDetails(${producto.id})`);
+                productoElement.innerHTML = `
+                    <img src="${producto.images[0]}" alt="${producto.name}" class="producto-imagen">
+                    <div class="producto-info">
+                        <div class="producto-nombre">${producto.name}</div>
+                        <div class="producto-rating">${producto.rating}</div>
+                        <div class="producto-precio">${producto.price}</div>
+                        <div class="producto-descripcion">${producto.description.substring(0, 100)}...</div>
+                    </div>
+                `;
+                productosGrid.appendChild(productoElement);
+            });
+
+            actualizarPaginacion(totalPaginas);
+        }
+
+        function actualizarPaginacion(totalPaginas) {
+            paginacion.innerHTML = '';
+
+            for (let i = 1; i <= totalPaginas; i++) {
+                const paginaElement = document.createElement('button');
+                paginaElement.className = 'pagina-btn';
+                paginaElement.textContent = i;
+                paginaElement.disabled = i === paginaActual;
+                paginaElement.addEventListener('click', () => {
+                    paginaActual = i;
+                    actualizarProductos();
+                });
+                paginacion.appendChild(paginaElement);
+            }
+        }
+
+        function viewProductDetails(id) {
+            const producto = productos.find(p => p.id === id);
+            if (producto) {
+                localStorage.setItem('productId', id);
+                window.location.href = 'detalle.html';
+            }
+        }
+
+        precioSlider.addEventListener('input', (e) => {
+            precioMaximo = parseInt(e.target.value);
+            precioMaximoSpan.textContent = precioMaximo;
+            actualizarProductos();
+        });
+
+        marcaFiltro.addEventListener('change', (e) => {
+            if (e.target.type === 'checkbox') {
+                if (e.target.checked) {
+                    marcasSeleccionadas.push(e.target.value);
+                } else {
+                    marcasSeleccionadas = marcasSeleccionadas.filter(m => m !== e.target.value);
+                }
+                actualizarProductos();
+            }
+        });
+
+        materialFiltro.addEventListener('change', (e) => {
+            if (e.target.type === 'checkbox') {
+                if (e.target.checked) {
+                    materialesSeleccionados.push(e.target.value);
+                } else {
+                    materialesSeleccionados = materialesSeleccionados.filter(m => m !== e.target.value);
+                }
+                actualizarProductos();
+            }
+        });
+
+        productosPorPaginaSelect.addEventListener('change', (e) => {
+            productosPorPagina = parseInt(e.target.value);
+            paginaActual = 1;
+            actualizarProductos();
+        });
+
+        // Obtener el parámetro de la URL
+        function obtenerParametroURL(nombre) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(nombre);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const marcaSeleccionada = obtenerParametroURL('marca');
+            
+            // Cargar productos y configurar filtros
+            cargarProductos().then(() => {
+                // Solo activa el filtro después de inicializar los filtros
+                if (marcaSeleccionada) {
+                    const checkbox = document.getElementById(`marca-${marcaSeleccionada}`);
+                    
+                    if (checkbox) {
+                        checkbox.checked = true; // Marcar el checkbox
+                        marcasSeleccionadas.push(marcaSeleccionada); // Añadir a los filtros
+                        actualizarProductos(); // Actualizar la lista de productos
+                    }
+                }
+            });
+        });
+
+        cargarProductos();
+    </script>
+
+<script>
+    const carousel = document.querySelector('.carousel');
+    const collaborators = document.querySelectorAll('.collaborator');
+    let isDragging = false;
+    let startPosition = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+    let animationID = 0;
+    let currentIndex = 0;
+
+    function setCarouselWidth() {
+        const containerWidth = document.querySelector('.carousel-container').offsetWidth;
+        const visibleItems = containerWidth < 768 ? (containerWidth < 480 ? 1 : 2) : 3;
+        const itemWidth = containerWidth / visibleItems;
+        carousel.style.width = `${itemWidth * collaborators.length}px`;
+        collaborators.forEach(collaborator => {
+            collaborator.style.width = `${itemWidth}px`;
+        });
+        return itemWidth;
+    }
+
+    let collaboratorWidth = setCarouselWidth();
+
+    collaborators.forEach((collaborator, index) => {
+        collaborator.addEventListener('dragstart', (e) => e.preventDefault());
+        
+        // Touch events
+        collaborator.addEventListener('touchstart', touchStart(index));
+        collaborator.addEventListener('touchend', touchEnd);
+        collaborator.addEventListener('touchmove', touchMove);
+
+        // Mouse events
+        collaborator.addEventListener('mousedown', touchStart(index));
+        collaborator.addEventListener('mouseup', touchEnd);
+        collaborator.addEventListener('mouseleave', touchEnd);
+        collaborator.addEventListener('mousemove', touchMove);
+    });
+
+    function touchStart(index) {
+        return function(event) {
+            currentIndex = index;
+            startPosition = getPositionX(event);
+            isDragging = true;
+            animationID = requestAnimationFrame(animation);
+            carousel.style.cursor = 'grabbing';
+        }
+    }
+
+    function touchEnd() {
+        isDragging = false;
+        cancelAnimationFrame(animationID);
+        const movedBy = currentTranslate - prevTranslate;
+        if (movedBy < -100 && currentIndex < collaborators.length - 1) currentIndex += 1;
+        if (movedBy > 100 && currentIndex > 0) currentIndex -= 1;
+        setPositionByIndex();
+        carousel.style.cursor = 'grab';
+    }
+
+    function touchMove(event) {
+        if (isDragging) {
+            const currentPosition = getPositionX(event);
+            currentTranslate = prevTranslate + currentPosition - startPosition;
+        }
+    }
+
+    function getPositionX(event) {
+        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+    }
+
+    function animation() {
+        setSliderPosition();
+        if (isDragging) requestAnimationFrame(animation);
+    }
+
+    function setSliderPosition() {
+        carousel.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    function setPositionByIndex() {
+        currentTranslate = currentIndex * -collaboratorWidth;
+        prevTranslate = currentTranslate;
+        setSliderPosition();
+    }
+
+    // Auto-scroll
+    function autoScroll() {
+        if (!isDragging) {
+            if (currentIndex < collaborators.length - 3) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            setPositionByIndex();
+        }
+    }
+
+    setInterval(autoScroll, 3000);
+
+    // Responsive adjustment
+    function adjustCarousel() {
+        collaboratorWidth = setCarouselWidth();
+        setPositionByIndex();
+    }
+
+    window.addEventListener('resize', adjustCarousel);
+    adjustCarousel();
+</script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNXR-Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/contacto.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/solo-logo-sin-fondo.png">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <img src="assets/img/solo-logo-sin-fondo.png" height="50px" alt="">
+                <h1>Pacific Northwest X-RAY Inc.</h1>
+            </a>
+        </div>
+
+        <div class="search-container">
+            <form id="search-form" onsubmit="handleSearch(event)">
+                <input type="text" id="search-input" placeholder="Search Products..." oninput="searchProducts()" autocomplete="off">
+                <button type="button" class="clear-button" onclick="clearInput()" style="display: none;">&times;</button>
+                <button type="submit" class="search-button">
+                    <img src="assets/img/search.png" alt="Buscar" width="20">
+                </button>
+            </form>
+            <div id="autocomplete-list" class="autocomplete-items"></div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="productos.html">Products</a></li>
+            <li><a href="marcas.html">Brands</a></li>
+            <li><a href="contacto.html">Contact Us</a></li> 
+        </ul>
+        <div class="menu-icon">
+            <span>&#9776;</span>
+        </div>
+    </nav> <!-- FIN DE BARRA DE NAVEGACIÓN -->
+
+    <!-- INICIO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Contact Us For <br> More Information</h2>
+        </div>
+    </section> <!-- FIN DE INICIO -->
+
+
+    <section class="contacto-seccion">
+        <div class="contacto-contenedor">
+            <div class="contacto-info">
+                <h2>Contact Us</h2>
+                <p class="contacto-direccion">P.O. Box 625 * Gresham, OR 97030 * U.S.A.</p>
+                <p class="contacto-telefono">Phone: 1-503-667-3000 & Toll-Free (US): 800-827-XRAY</p>
+                <p class="contacto-email">info@pacificnwxr.com</p>
+            </div>
+            <form id="formulario-contacto" class="contacto-formulario">
+                <input type="text" name="nombre" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="mensaje" placeholder="Menssage" required></textarea>
+                <button type="submit">Send Menssage</button>
+            </form>
+        </div>
+        <div class="contacto-mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44738.35433571581!2d-122.51242543054073!3d45.507116441404214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54959862444fdee9%3A0xc159bec8581d73ec!2sGresham%2C%20Oreg%C3%B3n%2097030%2C%20EE.%20UU.!5e0!3m2!1ses-419!2smx!4v1730258177962!5m2!1ses-419!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+      
+    <section id="productos-destacados">
+        <h2>Most Popular Products</h2>
+        <div class="productos-container">
+            <!-- Card 1 -->
+            <a href="detalle.html" class="a-productos" data-id="2"> <div class="producto-card">
+                <img src="assets/img/productos/ExamandSurgicalRadiationReducingGloves..png" alt="Producto 1">
+                <div class="producto-info">
+                    <h3>Exam and Surgical Radiation Reducing Gloves.</h3>
+                    <img src="assets/img/logos/ProGuard.png" alt="Logo Marca" class="logo-marca">
+                    <a href="contacto.html" class="btn-contacto">Contáctanos</a>
+                </div>
+            </div></a>
+            <!-- Card 2 -->
+            <a href="detalle.html" class="a-productos" data-id="1"> <div class="producto-card">
+                <img src="assets/img/productos/Infab's lightning fast 24 hour ship aprons..png" alt="Producto 2">
+                <div class="producto-info">
+                    <h3>Infab's lightning fast 24 hour ship aprons.</h3>
+                    <img src="assets/img/logos/INFAB.png" alt="Logo Marca" class="logo-marca">
+                    <a href="contacto.html" class="btn-contacto">Contáctanos</a>
+                </div>
+            </div></a>
+            <!-- Card 1 -->
+            <a href="detalle.html" class="a-productos" data-id="3"> <div class="producto-card">
+                <img src="assets/img/productos/Resolution Test Patterns.png" alt="Producto 1">
+                <div class="producto-info">
+                    <h3>Resolution Test Patterns, Easily Customized At Your Request.</h3>
+                    <img src="assets/img/logos/Diagnomatic.png" alt="Logo Marca" class="logo-marca">
+                    <a href="contacto.html" class="btn-contacto">Contáctanos</a>
+                </div>
+            </div></a>
+            
+            <!-- Repite para más productos -->
+        </div><br><br>
+    </section>
+
+       <!-- NUESTROS COLABORADORES -->
+    <section>
+        <div class="container">
+            <div class="header">
+                <h2><span class="highlight">BRA</span>NDS</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="collaborator">
+                        <img src="assets/img/logos/Diagnomatic.png" alt="DIAGNOMATIC" onclick="redirigirConFiltro('DIAGNOMATIC')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/INFAB.png" alt="INFAB" onclick="redirigirConFiltro('INFAB')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/ProGuard.png" alt="PROGUARD" onclick="redirigirConFiltro('PROGUARD')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/PEDIGO.png" alt="PEDIGO" onclick="redirigirConFiltro('PEDIGO')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/PHILLIPS SAFETY PRODUCTS.jpg" alt="PHILLIPS SAFETY PRODUCTS" onclick="redirigirConFiltro('PHILLIPS SAFETY PRODUCTS')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/pnwx.png" alt="PNWX" onclick="redirigirConFiltro('PNWX')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/PROTECSIMPYX-RAY.png" alt="PROTECSIMPYX-RAY" onclick="redirigirConFiltro('PROTECSIMPYX-RAY')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/RTINNOVATIONS.png" alt="RTINNOVATIONS" onclick="redirigirConFiltro('RTINNOVATIONS')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/TechnoAide.png" alt="TECHNOAIDE" onclick="redirigirConFiltro('TECHNOAIDE')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/WMI.png" alt="WMI" onclick="redirigirConFiltro('WMI')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/WOLF X-RAY CORPORATION.png" alt="WOLF X-RAY CORPORATION" onclick="redirigirConFiltro('WOLF X-RAY CORPORATION')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/brewer.png" alt="BREWER COMPANIES" onclick="redirigirConFiltro('BREWER COMPANIES')">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- FIN DE NUESTROS COLABORADORES -->
+
+
+    <br><br><br>
+    <!-- FOOTER -->
+    <section>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column" style="text-align: left;">
+                    <h3>Contact Us</h3>
+                    <p>Phone: 1-503-667-3000</p>
+                    <p>Toll-Free (US): 800-827-XRAY</p>
+                    <p>(800-827-9729)</p>
+                </div>
+                <div class="footer-column" style="text-align: left;">
+                    <h3>Address</h3>
+                    <p>P.O. Box 625 * Gresham, OR 97030 * U.S.A.</p><br>
+                    <h3>Schedule</h3>
+                    <p>Phone Lines Open....</p>
+                    <p>8 AM - 5 PM Monday-Friday (Pacific/West Coast Time)</p>
+                </div>
+                <div class="footer-column" style="text-align: left;">
+                    <h3>Páginas</h3>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="productos.html">Products</a></p>
+                    <p><a href="marcas.html">Brands</a></p>
+                    <p><a href="contacto.html">Contac Us</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2024 - <a href="#">Pacif Northwest X-Ray Inc.</a>. All Rights Reserved.</p>
+                <p>Desarrollado por - Andrea Rivera, Karina Salazar, Arely Lopez y <a href="#">Brandon Alvarez</a></p>
+            </div>
+        </footer>
+    </section> <!-- FIN DE FOOTER -->
+
+
+    
+<!-- SCRIPTS -->
+<script src="assets/scripts/scripts.js"></script>
+    <script>
+        // Inicializa EmailJS con tu User ID
+        (function() {
+            emailjs.init("EnNVyvofcvpVFTg4G");
+        })();
+
+        document.getElementById('formulario-contacto').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Obtén los valores del formulario
+            var nombre = this.nombre.value;
+            var email = this.email.value;
+            var mensaje = this.mensaje.value;
+
+            // Envía el correo electrónico usando EmailJS
+            emailjs.send("service_chn5veo", "template_6qtzwop", {
+                from_name: nombre,
+                from_email: email,
+                message: mensaje
+            }).then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Mensaje enviado con éxito!');
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Error al enviar el mensaje. Por favor, intenta de nuevo.');
+            });
+
+            // Limpia el formulario
+            this.reset();
+        });
+    </script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const productLinks = document.querySelectorAll('.a-productos');
+      
+      productLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const productId = this.getAttribute('data-id');
+          viewProductDetails(productId);
+        });
+      });
+    });
+    
+    function viewProductDetails(id) {
+      localStorage.setItem('productId', id);
+      window.location.href = 'detalle.html';
+    }
+    </script>
+
+<script>
+    const carousel = document.querySelector('.carousel');
+    const collaborators = document.querySelectorAll('.collaborator');
+    let isDragging = false;
+    let startPosition = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+    let animationID = 0;
+    let currentIndex = 0;
+
+    function setCarouselWidth() {
+        const containerWidth = document.querySelector('.carousel-container').offsetWidth;
+        const visibleItems = containerWidth < 768 ? (containerWidth < 480 ? 1 : 2) : 3;
+        const itemWidth = containerWidth / visibleItems;
+        carousel.style.width = `${itemWidth * collaborators.length}px`;
+        collaborators.forEach(collaborator => {
+            collaborator.style.width = `${itemWidth}px`;
+        });
+        return itemWidth;
+    }
+
+    let collaboratorWidth = setCarouselWidth();
+
+    collaborators.forEach((collaborator, index) => {
+        collaborator.addEventListener('dragstart', (e) => e.preventDefault());
+        
+        // Touch events
+        collaborator.addEventListener('touchstart', touchStart(index));
+        collaborator.addEventListener('touchend', touchEnd);
+        collaborator.addEventListener('touchmove', touchMove);
+
+        // Mouse events
+        collaborator.addEventListener('mousedown', touchStart(index));
+        collaborator.addEventListener('mouseup', touchEnd);
+        collaborator.addEventListener('mouseleave', touchEnd);
+        collaborator.addEventListener('mousemove', touchMove);
+    });
+
+    function touchStart(index) {
+        return function(event) {
+            currentIndex = index;
+            startPosition = getPositionX(event);
+            isDragging = true;
+            animationID = requestAnimationFrame(animation);
+            carousel.style.cursor = 'grabbing';
+        }
+    }
+
+    function touchEnd() {
+        isDragging = false;
+        cancelAnimationFrame(animationID);
+        const movedBy = currentTranslate - prevTranslate;
+        if (movedBy < -100 && currentIndex < collaborators.length - 1) currentIndex += 1;
+        if (movedBy > 100 && currentIndex > 0) currentIndex -= 1;
+        setPositionByIndex();
+        carousel.style.cursor = 'grab';
+    }
+
+    function touchMove(event) {
+        if (isDragging) {
+            const currentPosition = getPositionX(event);
+            currentTranslate = prevTranslate + currentPosition - startPosition;
+        }
+    }
+
+    function getPositionX(event) {
+        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+    }
+
+    function animation() {
+        setSliderPosition();
+        if (isDragging) requestAnimationFrame(animation);
+    }
+
+    function setSliderPosition() {
+        carousel.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    function setPositionByIndex() {
+        currentTranslate = currentIndex * -collaboratorWidth;
+        prevTranslate = currentTranslate;
+        setSliderPosition();
+    }
+
+    // Auto-scroll
+    function autoScroll() {
+        if (!isDragging) {
+            if (currentIndex < collaborators.length - 3) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            setPositionByIndex();
+        }
+    }
+
+    setInterval(autoScroll, 3000);
+
+    // Responsive adjustment
+    function adjustCarousel() {
+        collaboratorWidth = setCarouselWidth();
+        setPositionByIndex();
+    }
+
+    window.addEventListener('resize', adjustCarousel);
+    adjustCarousel();
+</script>
+
+<script>
+    function redirigirConFiltro(marca) {
+        // Redirigir a productos.html con la marca en los parámetros de la URL
+        window.location.href = `productos.html?marca=${encodeURIComponent(marca)}`;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda</title>
+    <link rel="stylesheet" href="assets/css/resultados.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/png" href="assets/img/diseo_de_maquinas_y_proyectos_s_a_de_c_v_logo.jpg">
+</head>
+<body>
+    <!-- CONTENIDO OMITIDO POR BREVIDAD -->
+
+      <!-- BARRA DE NAVEGACIÓN -->
+   <nav class="navbar">
+    <div class="logo-container">
+        <a href="index.html" class="logo">
+            <img src="assets/img/diseo_de_maquinas_y_proyectos_s_a_de_c_v_logo.jpg" height="55px" alt="">
+            
+        </a>
+    </div>
+
+    <div class="search-container">
+        <form id="search-form" onsubmit="handleSearch(event)">
+            <input type="text" id="search-input" placeholder="Buscar Productos..." oninput="searchProducts()" autocomplete="off">
+            <button type="button" class="clear-button" onclick="clearInput()" style="display: none;">&times;</button>
+            <button type="submit" class="search-button">
+                <img src="assets/img/search.png" alt="Buscar" width="20">
+            </button>
+        </form>
+        <div id="autocomplete-list" class="autocomplete-items"></div>
+    </div>
+
+    
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="marcas.html">Marcas</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=528182800775&text=Hola%21%20Quisiera%20más%20información%20sobre%20DIMAPSA%20Comercialización.">Contactanos</a></li> 
+        <li><a href="../index.html">Dimapsa</a></li>
+    </ul>
+    <div class="menu-icon">
+        <span>&#9776;</span>
+    </div>
+</nav> <!-- FIN DE BARRA DE NAVEGACIÓN -->
+
+    <!-- INICIO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 id="text-hero">Bienvenido a nuestra<br> Sección de Productos</h2>
+        </div>
+    </section> <!-- FIN DE INICIO -->
+    <div class="container-products">
+    <main>
+        <h1>Productos encontrados</h1>
+            <div id="resultados-container" class="productos-grid"></div>
+        <div id="paginacion"></div>
+    </main>
+</div>
+
+<section id="productos-destacados">
+        <h2>Productos Populares</h2>
+        <div class="productos-container">
+            <!-- Card 1 -->
+             <a href="detalle.html" class="a-productos" data-id="1"> <div class="producto-card">
+                <img src="assets/img/productos/info/BolsadePlastico.jpg" alt="Producto 1">
+                <div class="producto-info">
+                    <h3>BOLSA PLÁSTICA MULTICOLOR</h3>
+                    <a href="https://api.whatsapp.com/send?phone=528182800775&text=Hola%21%20Quisiera%20más%20información%20sobre%20DIMAPSA%20Comercialización." class="btn-contacto">Contáctanos</a>
+                </div>
+            </div></a>
+            <!-- Card 2 -->
+            <a href="detalle.html" class="a-productos" data-id="37"> <div class="producto-card">
+                <img src="assets/img/productos/info/AROMATIZANTE GLADE 400 ML.jpg" alt="Producto 2">
+                <div class="producto-info">
+                    <h3>AROMATIZANTE GLADE 400 ML</h3>
+                    <a href="https://api.whatsapp.com/send?phone=528182800775&text=Hola%21%20Quisiera%20más%20información%20sobre%20DIMAPSA%20Comercialización." class="btn-contacto">Contáctanos</a>
+                </div>
+            </div></a>
+            <!-- Card 1 -->
+            <a href="detalle.html" class="a-productos" data-id="11"> <div class="producto-card">
+                <img src="assets/img/productos/info/JALADOR DE PISO HOJA DOBLE 40 CM.jpg" alt="Producto 1">
+                <div class="producto-info">
+                    <h3>JALADOR DE PISO HOJA DOBLE 40 CM</h3>
+                    <a href="https://api.whatsapp.com/send?phone=528182800775&text=Hola%21%20Quisiera%20más%20información%20sobre%20DIMAPSA%20Comercialización." class="btn-contacto">Contáctanos</a>
+                </div>
+            </div></a>
+            
+            <!-- Repite para más productos -->
+        </div><br><br>
+    </section>
+
+         <!-- NUESTROS COLABORADORES -->
+    <section>
+        <div class="container">
+            <div class="header">
+                <h2><span class="highlight">MAR</span>CAS</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="collaborator">
+                        <img src="assets/img/logos/yesera.jpg" alt="yesera" onclick="redirigirConFiltro('yesera')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/crest.png" alt="crest" onclick="redirigirConFiltro('crest')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/berel.png" alt="berel" onclick="redirigirConFiltro('berel')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/austromex.png" alt="austromex" onclick="redirigirConFiltro('austromex')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/rotoplas.jpg" alt="rotoplas" onclick="redirigirConFiltro('rotoplas')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/anclo.avif" alt="anclo" onclick="redirigirConFiltro('anclo')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/fandeli.png" alt="fandeli" onclick="redirigirConFiltro('fandeli')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/truper.png" alt="truper" onclick="redirigirConFiltro('truper')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/pennsylvania.png" alt="pennsylvania" onclick="redirigirConFiltro('pennsylvania')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/bticino.png" alt="bticino" onclick="redirigirConFiltro('bticino')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/wd40.svg" alt="wd40" onclick="redirigirConFiltro('wd40')">
+                    </div>
+                    <div class="collaborator">
+                        <img src="assets/img/logos/oatey.webp" alt="oatey" onclick="redirigirConFiltro('oatey')">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- FIN DE NUESTROS COLABORADORES -->
+
+
+
+    <br><br><br>
+    <!-- FOOTER -->
+     <section>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column" style="text-align: left;">
+                    <h3>Contacto</h3>
+                    <p>home@dimapsa.com</p>
+                    <p>+52 81 8280 0775</p><br>
+                    <div class="redes">
+                        <a class="links-redes" href="https://www.facebook.com/people/Dimapsa/100083670967311/?ref=page_internal"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a class="links-redes" href="https://www.instagram.com/dimapsa.sa.cv/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a class="links-redes" href="https://www.linkedin.com/company/dise%C3%B1o-de-maquinas-y-proyectos-s-a-de-c-v/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column" style="text-align: left;">
+                    <h3>Dirección</h3>
+                    <p>José Ma. Bocanegra No.1313</p>
+                    <p>Col. Industrial, Monterrey, N.L., México</p><br>
+                    <h3>Horario</h3>
+                    <p>LUN a VIE: 7AM a 5PM</p>
+                </div>
+                <div class="footer-column" style="text-align: left;">
+                    <h3>Páginas</h3>
+                    <p><a href="index.html">Inicio</a></p>
+                    <p><a href="productos.html">Productos</a></p>
+                    <p><a href="marcas.html">Marcas</a></p>
+                    <p><a href="https://api.whatsapp.com/send?phone=528182800775&text=Hola%21%20Quisiera%20más%20información%20sobre%20DIMAPSA%20Comercialización.">Contactanos</a></p>
+                    <p><a href="../index.html">Dimapsa</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2026 - <a href="#">DIMAPSA</a>. All Rights Reserved.</p>
+                <p>Desarrollado por - <a href="https://www.linkedin.com/in/brandon-alvarez-hdz/">Brandon Alvarez</a></p>
+            </div>
+        </footer>
+    </section> <!-- FIN DE FOOTER -->
+
+    <script src="assets/scripts/busqueda.js" defer></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const productLinks = document.querySelectorAll('.a-productos');
+          
+          productLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              const productId = this.getAttribute('data-id');
+              viewProductDetails(productId);
+            });
+          });
+        });
+        
+        function viewProductDetails(id) {
+          localStorage.setItem('productId', id);
+          window.location.href = 'detalle.html';
+        }
+        </script>
+    
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const collaborators = document.querySelectorAll('.collaborator');
+        let isDragging = false;
+        let startPosition = 0;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
+        let animationID = 0;
+        let currentIndex = 0;
+
+        function setCarouselWidth() {
+            const containerWidth = document.querySelector('.carousel-container').offsetWidth;
+            const visibleItems = containerWidth < 768 ? (containerWidth < 480 ? 1 : 2) : 3;
+            const itemWidth = containerWidth / visibleItems;
+            carousel.style.width = `${itemWidth * collaborators.length}px`;
+            collaborators.forEach(collaborator => {
+                collaborator.style.width = `${itemWidth}px`;
+            });
+            return itemWidth;
+        }
+
+        let collaboratorWidth = setCarouselWidth();
+
+        collaborators.forEach((collaborator, index) => {
+            collaborator.addEventListener('dragstart', (e) => e.preventDefault());
+            
+            // Touch events
+            collaborator.addEventListener('touchstart', touchStart(index));
+            collaborator.addEventListener('touchend', touchEnd);
+            collaborator.addEventListener('touchmove', touchMove);
+
+            // Mouse events
+            collaborator.addEventListener('mousedown', touchStart(index));
+            collaborator.addEventListener('mouseup', touchEnd);
+            collaborator.addEventListener('mouseleave', touchEnd);
+            collaborator.addEventListener('mousemove', touchMove);
+        });
+
+        function touchStart(index) {
+            return function(event) {
+                currentIndex = index;
+                startPosition = getPositionX(event);
+                isDragging = true;
+                animationID = requestAnimationFrame(animation);
+                carousel.style.cursor = 'grabbing';
+            }
+        }
+
+        function touchEnd() {
+            isDragging = false;
+            cancelAnimationFrame(animationID);
+            const movedBy = currentTranslate - prevTranslate;
+            if (movedBy < -100 && currentIndex < collaborators.length - 1) currentIndex += 1;
+            if (movedBy > 100 && currentIndex > 0) currentIndex -= 1;
+            setPositionByIndex();
+            carousel.style.cursor = 'grab';
+        }
+
+        function touchMove(event) {
+            if (isDragging) {
+                const currentPosition = getPositionX(event);
+                currentTranslate = prevTranslate + currentPosition - startPosition;
+            }
+        }
+
+        function getPositionX(event) {
+            return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+        }
+
+        function animation() {
+            setSliderPosition();
+            if (isDragging) requestAnimationFrame(animation);
+        }
+
+        function setSliderPosition() {
+            carousel.style.transform = `translateX(${currentTranslate}px)`;
+        }
+
+        function setPositionByIndex() {
+            currentTranslate = currentIndex * -collaboratorWidth;
+            prevTranslate = currentTranslate;
+            setSliderPosition();
+        }
+
+        // Auto-scroll
+        function autoScroll() {
+            if (!isDragging) {
+                if (currentIndex < collaborators.length - 3) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                setPositionByIndex();
+            }
+        }
+
+        setInterval(autoScroll, 3000);
+
+        // Responsive adjustment
+        function adjustCarousel() {
+            collaboratorWidth = setCarouselWidth();
+            setPositionByIndex();
+        }
+
+        window.addEventListener('resize', adjustCarousel);
+        adjustCarousel();
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuIcon.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+        });
+    </script> 
+    <script>
+        function redirigirConFiltro(marca) {
+            // Redirigir a productos.html con la marca en los parámetros de la URL
+            window.location.href = `productos.html?marca=${encodeURIComponent(marca)}`;
+        }
+    </script><!-- FIN DE SCRIPTS -->
+</body>
+</html>

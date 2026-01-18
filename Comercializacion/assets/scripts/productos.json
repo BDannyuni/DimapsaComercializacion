@@ -1,0 +1,937 @@
+[
+    {
+        "id": 1,
+        "name": "BOLSA PLÁSTICA MULTICOLOR",
+        "price": "$0.00",
+        "brand": "INFAB", 
+        "material": "Platico",
+        "description": "Bolsa de Platico en diferentes colores y tamaños",
+        "images": ["assets/img/productos/info/BolsadePlastico.jpg"],
+        "brandLogo": "",
+        "specifications": {
+            "headers": ["Codigo", "Medida", "Empaque"],
+            "rows": [
+                ["00872", "25X40 CH", "25KG"],
+                ["00873", "25X50 MED", "25KG"],
+                ["00874", "30X60 GD.", "25KG"]  
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "name": "ESPONJA",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Sintético",
+        "description": "Esponja para limpieza general",
+        "images": ["assets/img/productos/info/EsponjaP-Afinar.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Medida", "Empaque"],
+        "rows": [
+            ["00519", "Llano p/afinar", "20"]
+        ]
+        }
+    },
+    {
+        "id": 3,
+        "name": "ESPONJA Y CEPILLO PARA LAVAR CARROS",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "PVC / Esponja",
+        "description": "Esponja y cepillo para lavado de automóviles",
+        "images": ["assets/img/productos/info/EsponjayCepillo.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["00520", "Esponja", "10"],
+            ["63119", "Cepillo PVC", "12"]
+        ]
+        }
+    },
+    {
+        "id": 4,
+        "name": "RECOGEDOR PARA BASURA",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Plástico",
+        "description": "Recogedor para basura con mango de madera",
+        "images": ["assets/img/productos/info/Recogedor.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["06748", "Plástico", "10"]
+        ]
+        }
+    },
+    {
+        "id": 5,
+        "name": "TOALLAS SCOTT SHOP ROLLO",
+        "price": "$0.00",
+        "brand": "SCOTT",
+        "material": "Papel",
+        "description": "Toalla absorbente industrial en rollo",
+        "images": ["assets/img/productos/info/TOALLAS SCOTT SHOP ROLLO.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Empaque"],
+        "rows": [
+            ["04329", "12"]
+        ]
+        }
+    },
+    {
+        "id": 6,
+        "name": "ESTOPA SUPER EXTRA BLANCA",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Algodón",
+        "description": "Estopa blanca de alta calidad para limpieza",
+        "images": ["assets/img/productos/info/ESTOPA SUPER EXTRA BLANCA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["04319", "Paca c/25 KG", "1"],
+            ["04320", "Paca c/50 KG", "1"]
+        ]
+        }
+    },
+    {
+        "id": 7,
+        "name": "ACEITE 3 EN 1 LUSTRADOR ROJO",
+        "price": "$0.00",
+        "brand": "3 EN 1",
+        "material": "Aceite",
+        "description": "Aceite multiusos lubricante",
+        "images": ["assets/img/productos/info/ACEITE 3 EN 1 LUSTRADOR ROJO.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Contenido", "Empaque"],
+        "rows": [
+            ["60589", "240 ML", "12"],
+            ["60590", "480 ML", "12"]
+        ]
+        }
+    },
+    {
+        "id": 8,
+        "name": "BOLSA PLÁSTICA NEGRA",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Plástico",
+        "description": "Bolsa plástica negra para basura",
+        "images": ["assets/img/productos/info/BOLSA PLÁSTICA NEGRA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Medida", "Empaque"],
+        "rows": [
+            ["00875", "25X40 CH", "25KG"],
+            ["00876", "25X50 MED", "25KG"],
+            ["00877", "30X60 GD", "25KG"],
+            ["00886", "50X70 CM", "5KG"],
+            ["00888", "90X70 CM", "5KG"],
+            ["00879", "90X1.20 M", "5KG"]
+        ]
+        }
+    },
+    {
+        "id": 9,
+        "name": "JERGA BLANCA",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Algodón",
+        "description": "Jerga blanca para limpieza",
+        "images": ["assets/img/productos/info/JERGA BLANCA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Medida"],
+        "rows": [
+            ["04362", "De primera", "50 CM X 25 MTS"]
+        ]
+        }
+    },
+    {
+        "id": 10,
+        "name": "TELA MAGITEL CAJA",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Tela",
+        "description": "Tela Magitel en caja C/25 paquetes C/6 piezas",
+        "images": ["assets/img/productos/info/TELA MAGITEL CAJA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Empaque"],
+        "rows": [
+            ["04364", "1"]
+        ]
+        }
+    },
+    {
+        "id": 11,
+        "name": "JALADOR DE PISO HOJA DOBLE 40 CM",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Plástico / Metal",
+        "description": "Jalador de piso con hoja doble",
+        "images": ["assets/img/productos/info/JALADOR DE PISO HOJA DOBLE 40 CM.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Clave", "Empaque"],
+        "rows": [
+            ["75083", "JAL240N-MAD", "50"],
+            ["75086", "JAL240N-MET", "50"]
+        ]
+        }
+    },
+    {
+        "id": 12,
+        "name": "BRASSO LIMPIA METAL PASTA",
+        "price": "$0.00",
+        "brand": "BRASSO",
+        "material": "Pasta limpiadora",
+        "description": "Limpiador de metales en presentación de pasta",
+        "images": ["assets/img/productos/info/BRASSO LIMPIA METAL PASTA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["60585", "Pasta 70 GR", "48"]
+        ]
+        }
+    },
+    {
+        "id": 13,
+        "name": "BRASSO LIMPIA METAL LÍQUIDO 75 ML",
+        "price": "$0.00",
+        "brand": "BRASSO",
+        "material": "Líquido",
+        "description": "Limpiador de metales líquido",
+        "images": ["assets/img/productos/info/BRASSO LIMPIA METAL LÍQUIDO 75 ML.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["60586", "Liq. 75 ML", "12"]
+        ]
+        }
+    },
+    {
+        "id": 14,
+        "name": "BRASSO LIMPIA METAL LÍQUIDO 200 ML",
+        "price": "$0.00",
+        "brand": "BRASSO",
+        "material": "Líquido",
+        "description": "Limpiador de metales líquido presentación grande",
+        "images": ["assets/img/productos/info/BRASSO LIMPIA METAL LÍQUIDO 200 ML.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["60587", "Liq. 200 ML", "12"]
+        ]
+        }
+    },
+    {
+        "id": 15,
+        "name": "LIMPIADOR PARA CLIMAS SERPENTIKLEEN ROSA",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Líquido",
+        "description": "Limpiador para climas tipo SERPENTIKLEEN",
+        "images": ["assets/img/productos/info/SERPENTIKLEEN.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["70811", "1 LTO", "20"]
+        ]
+        }
+    },
+    {
+        "id": 16,
+        "name": "LIMPIADOR PARA CLIMAS COIL MORADO BIODEGRADABLE",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Líquido biodegradable",
+        "description": "Limpiador para climas biodegradable",
+        "images": ["assets/img/productos/info/LIMPIADOR PARA CLIMAS COIL MORADO BIODEGRADABLE.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Contenido", "Empaque"],
+        "rows": [
+            ["70817", "1 LTO", "12"]
+        ]
+        }
+    },
+    {
+        "id": 17,
+        "name": "JALADOR DE PISO BASTÓN METÁLICO",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Metal / Hule",
+        "description": "Jalador de piso con bastón metálico",
+        "images": ["assets/img/productos/info/JALADOR DE PISO BASTÓN METÁLICO.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Clave", "Medida", "Empaque"],
+        "rows": [
+            ["75085", "JAL050N-MET", "50 CM", "50"]
+        ]
+        }
+    },
+    {
+        "id": 18,
+        "name": "JALADOR DE PISO BASTÓN MADERA",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Madera / Hule",
+        "description": "Jalador de piso con bastón de madera",
+        "images": ["assets/img/productos/info/JALADOR DE PISO BASTÓN MADERA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Clave", "Medida", "Empaque"],
+        "rows": [
+            ["75081", "JAL040N-MAD", "40 CM", "50"],
+            ["75082", "JAL050N-MAD", "50 CM", "50"]
+        ]
+        }
+    },
+    {
+        "id": 19,
+        "name": "TRAPO INDUSTRIAL",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Tela reciclada",
+        "description": "Trapo industrial 100% camiseta de color",
+        "images": ["assets/img/productos/info/TRAPO INDUSTRIAL.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["04400", "100% camiseta de color", "20 KG"]
+        ]
+        }
+    },
+    {
+        "id": 20,
+        "name": "LYSOL AEROSOL DESINFECTANTE BRISA DE LIMÓN",
+        "price": "$0.00",
+        "brand": "LYSOL",
+        "material": "Aerosol",
+        "description": "Desinfectante en aerosol aroma brisa de limón",
+        "images": ["assets/img/productos/info/LYSOL AEROSOL DESINFECTANTE BRISA DE LIMÓN.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Contenido", "Empaque"],
+        "rows": [
+            ["70769", "354 GR", "12"]
+        ]
+        }
+    },
+    {
+        "id": 21,
+        "name": "LYSOL AEROSOL DESINFECTANTE CASCADA DE PRIMAVERA",
+        "price": "$0.00",
+        "brand": "LYSOL",
+        "material": "Aerosol",
+        "description": "Desinfectante en aerosol aroma cascada de primavera",
+        "images": ["assets/img/productos/info/LYSOL AEROSOL DESINFECTANTE CASCADA DE PRIMAVERA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Contenido", "Empaque"],
+        "rows": [
+            ["70770", "354 GR", "12"]
+        ]
+        }
+    },
+    {
+        "id": 22,
+        "name": "DISPLAY CON 58 ARTÍCULOS DE LIMPIEZA REYNERA",
+        "price": "$0.00",
+        "brand": "REYNERA",
+        "material": "Mixto",
+        "description": "Display surtido con artículos de limpieza",
+        "images": ["assets/img/productos/info/DISPLAY CON 58 ARTÍCULOS DE LIMPIEZA REYNERA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Contenido", "Empaque"],
+        "rows": [
+            ["00300", "42 cepillos + 20 escobas + 16 recogedores", "1"]
+        ]
+        }
+    },
+    {
+        "id": 23,
+        "name": "FRANELA ROLLO 50 CM X 25 MTS",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Tela",
+        "description": "Franela en rollo para limpieza",
+        "images": ["assets/img/productos/info/FRANELA ROLLO 50 CM X 25 MTS.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Color", "Empaque"],
+        "rows": [
+            ["53511", "Blanco", "1"],
+            ["53510", "Gris", "1"],
+            ["53509", "Roja", "1"]
+        ]
+        }
+    },
+    {
+        "id": 24,
+        "name": "ESCOBA PEÑOLERA DOCENA",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Fibra natural",
+        "description": "Escoba peñolera en presentación docena",
+        "images": ["assets/img/productos/info/ESCOBA PEÑOLERA DOCENA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["06742", "De retán", "1"],
+            ["06740", "De espiga", "1"]
+        ]
+        }
+    },
+    {
+        "id": 25,
+        "name": "ESCOBA PEÑOLERA MEDIA DOCENA",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Fibra natural",
+        "description": "Escoba peñolera media docena",
+        "images": ["assets/img/productos/info/ESCOBA PEÑOLERA MEDIA DOCENA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["06743", "De retán", "1"],
+            ["06799", "De espiga", "1"]
+        ]
+        }
+    },
+    {
+        "id": 26,
+        "name": "ESCOBA MEDIANA DOCENA",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Fibra sintética",
+        "description": "Escoba mediana presentación docena",
+        "images": ["assets/img/productos/info/ESCOBA MEDIANA DOCENA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Color", "Empaque"],
+        "rows": [
+            ["06741", "7 hilos", "1"]
+        ]
+        }
+    },
+    {
+        "id": 27,
+        "name": "ESCOBA PLÁSTICO MEDIANA",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Plástico",
+        "description": "Escoba plástica mediana con mango de madera",
+        "images": ["assets/img/productos/info/ESCOBA PLÁSTICO MEDIANA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["06797", "Mango madera", "20"]
+        ]
+        }
+    },
+    {
+        "id": 28,
+        "name": "CEPILLO DE IXTLE NACIONAL ECONÓMICO",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Ixtle",
+        "description": "Cepillo de ixtle económico",
+        "images": ["assets/img/productos/info/CEPILLO DE IXTLE NACIONAL ECONÓMICO.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Medida", "Empaque"],
+        "rows": [
+            ["06522", "10\"", "50"]
+        ]
+        }
+    },
+    {
+        "id": 29,
+        "name": "CEPILLO DE IXTLE EXPORTACIÓN",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Ixtle",
+        "description": "Cepillo de ixtle para exportación",
+        "images": ["assets/img/productos/info/CEPILLO DE IXTLE EXPORTACIÓN.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["00866", "10\" s/mango", "12"]
+        ]
+        }
+    },
+    {
+        "id": 30,
+        "name": "MANGO DE MADERA",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Madera",
+        "description": "Mango de madera para escoba o cepillo",
+        "images": ["assets/img/productos/info/MANGO DE MADERA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Medida", "Empaque"],
+        "rows": [
+            ["06529", "1.2 MT c/rosca 3/4", "50"],
+            ["06528", "P/cepillo de ixtle 48\"", "5"],
+            ["06530", "3/4 x 1.2 M pintado c/rosca de 1ra", "50"]
+        ]
+        }
+    },
+    {
+        "id": 31,
+        "name": "TRAPEADOR MICRO TOALLA DOCENA",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Microfibra",
+        "description": "Trapeador de micro toalla",
+        "images": ["assets/img/productos/info/TRAPEADOR MICRO TOALLA DOCENA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["06744", "Micro toalla", "1"]
+        ]
+        }
+    },
+    {
+        "id": 32,
+        "name": "TRAPEADOR DOCENA HILO MAGITEL",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Hilo",
+        "description": "Trapeador de hilo Magitel",
+        "images": ["assets/img/productos/info/TRAPEADOR DOCENA HILO MAGITEL.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["06631", "Hilo Magitel", "1"]
+        ]
+        }
+    },
+    {
+        "id": 33,
+        "name": "TRAPEADOR MEDIA DOCENA",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Hilo",
+        "description": "Trapeador media docena",
+        "images": ["assets/img/productos/info/TRAPEADOR MEDIA DOCENA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["06798", "Hilo Magitel", "1"],
+            ["06602", "Pabilo", "1"],
+            ["06614", "Hilo suave", "1"]
+        ]
+        }
+    },
+    {
+        "id": 34,
+        "name": "TRAPEADOR DOCENA",
+        "price": "$0.00",
+        "brand": "INFAB",
+        "material": "Hilo",
+        "description": "Trapeador presentación docena",
+        "images": ["assets/img/productos/info/TRAPEADOR DOCENA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["06632", "Hilo suave", "1"],
+            ["06630", "Pabilo", "1"]
+        ]
+        }
+    },
+    {
+        "id": 35,
+        "name": "BRASSO AROMAS",
+        "price": "$0.00",
+        "brand": "BRASSO",
+        "material": "Líquido",
+        "description": "Limpiador aromatizante para superficies",
+        "images": ["assets/img/productos/info/BRASSO AROMAS.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Tipo", "Empaque"],
+        "rows": [
+            ["60599", "Vidrio superficies 650 ML", "12"],
+            ["60597", "Lavanda 1 L", "12"]
+        ]
+        }
+    },
+    {
+        "id": 36,
+        "name": "HARPIC POWER ULTRA TODO EN 1",
+        "price": "$0.00",
+        "brand": "HARPIC",
+        "material": "Líquido",
+        "description": "Limpiador para WC todo en uno",
+        "images": ["assets/img/productos/info/HARPIC POWER ULTRA TODO EN 1.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Contenido", "Empaque"],
+        "rows": [
+            ["70758", "750 ML", "24"]
+        ]
+        }
+    },
+    {
+        "id": 37,
+        "name": "AROMATIZANTE GLADE 400 ML",
+        "price": "$0.00",
+        "brand": "GLADE",
+        "material": "Aerosol",
+        "description": "Aromatizante ambiental en aerosol",
+        "images": ["assets/img/productos/info/AROMATIZANTE GLADE 400 ML.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Aroma", "Empaque"],
+        "rows": [
+            ["60550", "Hawaian", "12"],
+            ["60551", "Manzana Canela", "12"],
+            ["60552", "Calm Lavanda", "12"],
+            ["60553", "Jard Campes", "12"],
+            ["60554", "Paraiso Azul", "12"],
+            ["60555", "Fresh Lemon", "12"],
+            ["60568", "Frutos Rojos", "12"]
+        ]
+        }
+    },
+    {
+        "id": 38,
+        "name": "AROMATIZANTE GLADE CON REPUESTO",
+        "price": "$0.00",
+        "brand": "GLADE",
+        "material": "Aromatizante",
+        "description": "Aromatizante Glade con repuesto",
+        "images": ["assets/img/productos/info/AROMATIZANTE GLADE CON REPUESTO.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Aroma", "Empaque"],
+        "rows": [
+            ["60545", "Natural Manzana", "12"]
+        ]
+        }
+    },
+    {
+        "id": 39,
+        "name": "CANASTILLA PARA SANITARIO MR. MUSCULO",
+        "price": "$0.00",
+        "brand": "MR. MUSCULO",
+        "material": "Gel",
+        "description": "Canastilla aromatizante para sanitario",
+        "images": ["assets/img/productos/info/CANASTILLA PARA SANITARIO MR. MUSCULO.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Contenido", "Empaque"],
+        "rows": [
+            ["60543", "35 GR", "12"]
+        ]
+        }
+    },
+    {
+        "id": 40,
+        "name": "AROMATIZANTE P/AUTO GLADE",
+        "price": "$0.00",
+        "brand": "GLADE",
+        "material": "Papel aromatizado",
+        "description": "Aromatizante ambiental en papel",
+        "images": ["assets/img/productos/info/AROMATIZANTE P-AUTO GLADE.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Aroma", "Empaque"],
+        "rows": [
+            ["60567", "Pino", "12"]
+        ]
+        }
+    },
+    {
+        "id": 41,
+        "name": "DESTAPADOR LÍQUIDO",
+        "price": "$0.00",
+        "brand": "HARPIC",
+        "material": "Líquido",
+        "description": "Destapador líquido para drenajes",
+        "images": ["assets/img/productos/info/DESTAPADOR LÍQUIDO.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Contenido", "Empaque"],
+        "rows": [
+            ["70767", "1 L", "12"]
+        ]
+        }
+    },
+    {
+        "id": 42,
+        "name": "LIMPIADOR PLEDGE ORIGINAL MADERAS",
+        "price": "$0.00",
+        "brand": "PLEDGE",
+        "material": "Aerosol",
+        "description": "Limpiador para muebles de madera",
+        "images": ["assets/img/productos/info/LIMPIADOR PLEDGE ORIGINAL MADERAS.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Contenido", "Empaque"],
+        "rows": [
+            ["75087", "387 ML", "12"]
+        ]
+        }
+    },
+    {
+        "id": 43,
+        "name": "LIMPIADOR LÍQUIDO GEL PATO PINO VERDE",
+        "price": "$0.00",
+        "brand": "PATO",
+        "material": "Gel",
+        "description": "Limpiador de WC aroma pino",
+        "images": ["assets/img/productos/info/LIMPIADOR LÍQUIDO GEL PATO PINO VERDE.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Contenido", "Empaque"],
+        "rows": [
+            ["60541", "500 ML", "12"]
+        ]
+        }
+    },
+    {
+        "id": 44,
+        "name": "LIMPIADOR LÍQUIDO GEL PATO BRISA DE MAR AZUL",
+        "price": "$0.00",
+        "brand": "PATO",
+        "material": "Gel",
+        "description": "Limpiador de WC aroma brisa de mar",
+        "images": ["assets/img/productos/info/LIMPIADOR LÍQUIDO GEL PATO BRISA DE MAR AZUL.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Contenido", "Empaque"],
+        "rows": [
+            ["60540", "500 ML", "12"]
+        ]
+        }
+    },
+    {
+        "id": 45,
+        "name": "INSECTICIDA RAID CASA Y JARDIN NARANJA",
+        "price": "$0.00",
+        "brand": "RAID",
+        "material": "Aerosol",
+        "description": "Insecticida para uso en casa y jardín con aroma naranja",
+        "images": ["assets/img/productos/info/INSECTICIDA RAID CASA Y JARDIN NARANJA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Codigo", "Contenido", "Empaque"],
+        "rows": [
+            ["75096", "400 ML", "12"]
+        ]
+        }
+    },
+    {
+        "id": 46,
+        "name": "DESTAPACAÑOS LIQUIDO DRANO MAX GEL",
+        "price": "$0.00",
+        "brand": "DRANO",
+        "material": "Liquido",
+        "description": "Destapacaños líquido de alta efectividad",
+        "images": ["assets/img/productos/info/DESTAPACAÑOS LIQUIDO DRANO MAX GEL.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Codigo", "Contenido", "Empaque"],
+        "rows": [
+            ["60539", "946 ML", "12"]
+        ]
+        }
+    },
+    {
+        "id": 47,
+        "name": "EASY OFF PASTA REGULAR",
+        "price": "$0.00",
+        "brand": "EASY OFF",
+        "material": "Pasta",
+        "description": "Limpiador en pasta para remover grasa difícil",
+        "images": ["assets/img/productos/info/EASY OFF PASTA REGULAR.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Codigo", "Medida", "Empaque"],
+        "rows": [
+            ["70762", "238 GRS", "12"]
+        ]
+        }
+    },
+    {
+        "id": 48,
+        "name": "INSECTICIDA RAID CASA Y JARDIN",
+        "price": "$0.00",
+        "brand": "RAID",
+        "material": "Aerosol",
+        "description": "Insecticida para control de insectos en casa y jardín",
+        "images": ["assets/img/productos/info/INSECTICIDA RAID CASA Y JARDIN.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Codigo", "Contenido", "Empaque"],
+        "rows": [
+            ["75090", "400 ML", "12"]
+        ]
+        }
+    },
+    {
+        "id": 49,
+        "name": "LIMPIADOR LIQUIDO MR. MUSCULO CRYSTAL RAIN",
+        "price": "$0.00",
+        "brand": "MR. MUSCULO",
+        "material": "Liquido",
+        "description": "Limpiador líquido multiusos sin amoniaco",
+        "images": ["assets/img/productos/info/LIMPIADOR LIQUIDO MR. MUSCULO CRYSTAL RAIN.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Codigo", "Contenido", "Empaque"],
+        "rows": [
+            ["75098", "640 ML", "12"]
+        ]
+        }
+    },
+    {
+        "id": 50,
+        "name": "LIMPIADOR LIQUIDO MR. MUSCULO WINDEX",
+        "price": "$0.00",
+        "brand": "MR. MUSCULO",
+        "material": "Liquido",
+        "description": "Limpiador líquido para cristales y superficies",
+        "images": ["assets/img/productos/info/LIMPIADOR LIQUIDO MR. MUSCULO WINDEX.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Codigo", "Contenido", "Empaque"],
+        "rows": [
+            ["75097", "500 ML", "12"]
+        ]
+        }
+    },
+    {
+        "id": 51,
+        "name": "INSECTICIDA BAYGON CASA Y JARDIN",
+        "price": "$0.00",
+        "brand": "BAYGON",
+        "material": "Aerosol",
+        "description": "Insecticida para uso doméstico y áreas exteriores",
+        "images": ["assets/img/productos/info/INSECTICIDA BAYGON CASA Y JARDIN.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Codigo", "Contenido", "Empaque"],
+        "rows": [
+            ["75094", "400 ML", "12"],
+            ["75095", "250 ML", "12"]
+        ]
+        }
+    },
+    {
+        "id": 52,
+        "name": "INSECTICIDA RAID RAIDOLITOS CON 10",
+        "price": "$0.00",
+        "brand": "RAID",
+        "material": "Espiral",
+        "description": "Insecticida en espiral para control de mosquitos",
+        "images": ["assets/img/productos/info/INSECTICIDA RAID RAIDOLITOS CON 10.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Codigo", "Tipo", "Empaque"],
+        "rows": [
+            ["75092", "Espiral", "12"]
+        ]
+        }
+    },
+    {
+        "id": 53,
+        "name": "INSECTICIDA RAID MAX AEROSOL MATA CUCARACHA",
+        "price": "$0.00",
+        "brand": "RAID",
+        "material": "Aerosol",
+        "description": "Insecticida aerosol de máxima acción contra cucarachas",
+        "images": ["assets/img/productos/info/INSECTICIDA RAID MAX AEROSOL MATA CUCARACHA.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Codigo", "Contenido", "Empaque"],
+        "rows": [
+            ["75091", "400 ML", "12"],
+            ["75093", "285 ML", "12"]
+        ]
+        }
+  },
+  {
+    "id": 54,
+    "name": "DISCO DE CORTE TIPO CUBO",
+    "price": "$0.00",
+    "brand": "AUSTROMEX",
+    "material": "Disco abrasivo",
+    "description": "Disco de corte tipo cubo para metal y piedra en diferentes líneas y dimensiones",
+    "images": ["assets/img/productos/info/DISCO DE CORTE TIPO CUBO.jpg", "assets/img/productos/info/DISCO DE CORTE TIPO CUBO2.jpg", "assets/img/productos/info/DISCO DE CORTE TIPO CUBO3.jpg"
+, "assets/img/productos/info/DISCO DE CORTE TIPO CUBO4.jpg","assets/img/productos/info/DISCO DE CORTE TIPO CUBO14.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Codigo", "Clave", "Linea", "Max RPM", "Dimension (in)", "Dimension (mm)", "Empaque", "Uso"],
+      "rows": [
+        ["72909", "2016", "EASY CUT", "13300", "4-1/2\" x 0.040\" x 7/8\"", "115 x 1 x 22.23", "25", "METAL"],
+        ["00217", "754", "CLASICA", "13300", "4-1/2\" x 1/8\" x 7/8\"", "115 x 3.2 x 22.2", "25", "PIEDRA"],
+        ["59528", "377", "EASY-CUT", "13300", "4-1/2\" x 1/8\" x 7/8\"", "115 x 3.2 x 22.2", "25", "PIEDRA"],
+        ["72943", "566", "HUM", "13300", "4-1/2\" x 1/8\" x 7/8\"", "115 x 3.2 x 22.2", "25", "METAL"],
+        ["59580", "2006", "EASY CUT", "13300", "4-1/2\" x 1/8\" x 7/8\"", "115 x 3.2 x 22.2", "25", "METAL"],
+        ["00312", "3841", "MAGMA", "8500", "7\" x 1/8\" x 7/8\"", "180 x 3.2 x 22.2", "25", "METAL"],
+        ["51571", "374", "EASY CUT", "8500", "7\" x 1/8\" x 7/8\"", "180 x 3.2 x 22.2", "25", "PIEDRA"],
+        ["72944", "567", "HUM", "8500", "7\" x 1/8\" x 7/8\"", "180 x 3.2 x 22.2", "25", "METAL"],
+        ["59509", "2008", "EASY CUT", "8500", "7\" x 1/8\" x 7/8\"", "180 x 3.2 x 22.2", "25", "METAL"],
+        ["59512", "2010", "EASY CUT", "6650", "9\" x 1/8\" x 7/8\"", "230 x 3.2 x 22.2", "25", "METAL"],
+        ["72987", "568", "HUM", "6650", "9\" x 1/8\" x 7/8\"", "230 x 3.2 x 22.2", "25", "METAL"]
+      ]
+    }
+  },
+  {
+    "id": 55,
+    "name": "DISCO TIPO 27 DESBASTE DE METAL TIPO CUBO",
+    "price": "$0.00",
+    "brand": "AUSTROMEX",
+    "material": "Disco abrasivo",
+    "description": "Disco tipo 27 para desbaste de metal, tipo cubo, en varias líneas y dimensiones",
+    "images": ["assets/img/productos/info/DISCOS TIPO 27 - DESBASTE DE METAL- TIPO CUBO.jpg","assets/img/productos/info/DISCOS TIPO 27 - DESBASTE DE METAL- TIPO CUBO2.jpg",
+"assets/img/productos/info/DISCOS TIPO 27 - DESBASTE DE METAL- TIPO CUBO3.jpg","assets/img/productos/info/DISCOS TIPO 27 - DESBASTE DE METAL- TIPO CUBO4.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Codigo", "Clave", "Linea", "Max RPM", "Dimension (in)", "Dimension (mm)", "Empaque", "Uso"],
+      "rows": [
+        ["60915", "-560", "HUM", "8500", "4-1/2\" x 1/4\" x 7/8\"", "115 x 6.4 x 15.88", "10", "METAL"],
+        ["72942", "560", "HUM", "8500", "4-1/2\" x 1/4\" x 7/8\"", "115 x 6.4 x 22.2", "25", "METAL"],
+        ["58041", "2004", "EASY CUT", "13300", "4-1/2\" x 1/4\" x 7/8\"", "115 x 6.4 x 22.23", "25", "METAL"],
+        ["00301", "525", "KREATOR", "13300", "4-1/2\" x 1/4\" x 7/8\"", "115 x 6.4 x 22.23", "25", "METAL"],
+        ["00224", "3811", "MAGMA", "8500", "7\" x 1/4\" x 7/8\"", "180 x 6.4 x 22.2", "25", "METAL"],
+        ["00328", "597", "KREATOR", "8500", "7\" x 1/4\" x 7/8\"", "180 x 6.4 x 22.2", "25", "METAL"],
+        ["60902", "-561", "HUM", "8500", "7\" x 1/4\" x 7/8\"", "180 x 7 x 22.23", "10", "METAL"],
+        ["72986", "561", "HUM", "8500", "7\" x 1/4\" x 7/8\"", "180 x 7 x 22.2", "25", "METAL"],
+        ["72913", "378", "CLASIC", "8500", "7\" x 5/32\" x 7/8\"", "180 x 4.1 x 22.22", "25", "INOX"],
+        ["59504", "2007", "EASY CUT", "8500", "7\" x 1/4\" x 7/8\"", "180 x 6.4 x 22.2", "25", "METAL"],
+        ["72988", "562", "HUM", "6650", "9\" x 1/4\" x 7/8\"", "230 x 6.4 x 22.2", "25", "METAL"]
+      ]
+    }
+  }
+
+
+]
+
