@@ -81,7 +81,7 @@ function searchProducts() {
     const filteredProducts = products.filter(product =>
         product.name.toLowerCase().includes(filter) ||
         product.brand.toLowerCase().includes(filter) ||
-        product.material.toLowerCase().includes(filter)
+        product.type.toLowerCase().includes(filter)
     );
 
     // Mostrar sugerencias de autocompletado
@@ -120,7 +120,7 @@ function handleSearch(event) {
         const filteredProducts = products.filter(product =>
             product.name.toLowerCase().includes(query) ||
             product.brand.toLowerCase().includes(query) ||
-            product.material.toLowerCase().includes(query)
+            product.type.toLowerCase().includes(query)
         );
 
         // Si hay solo un producto que coincide, redirigir a la página de detalles
@@ -153,7 +153,7 @@ function searchProducts() {
     const filteredProducts = products.filter(product =>
         product.name.toLowerCase().includes(filter) ||
         product.brand.toLowerCase().includes(filter) ||
-        product.material.toLowerCase().includes(filter)
+        product.type.toLowerCase().includes(filter)
     );
 
     // Mostrar sugerencias de autocompletado

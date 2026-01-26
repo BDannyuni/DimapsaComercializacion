@@ -43,7 +43,6 @@ function mostrarResultados() {
                 <div class="producto-info">
                     <div class="producto-nombre">${product.name}</div>
                     <div class="producto-rating">${product.rating}</div>
-                    <div class="producto-precio">Precio: ${product.price}</div>
                     <div class="producto-descripcion">${product.description.substring(0, 100)}...</div>
                 </div>
             `;

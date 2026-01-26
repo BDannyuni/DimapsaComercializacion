@@ -2,9 +2,8 @@
     {
         "id": 1,
         "name": "BOLSA PLÁSTICA MULTICOLOR",
-        "price": "$0.00",
         "brand": "INFAB", 
-        "material": "Platico",
+        "type": "Limpieza",
         "description": "Bolsa de Platico en diferentes colores y tamaños",
         "images": ["assets/img/productos/info/BolsadePlastico.jpg"],
         "brandLogo": "",
@@ -20,9 +19,8 @@
     {
         "id": 2,
         "name": "ESPONJA",
-        "price": "$0.00",
         "brand": "INFAB",
-        "material": "Sintético",
+        "type": "Ferretería",
         "description": "Esponja para limpieza general",
         "images": ["assets/img/productos/info/EsponjaP-Afinar.jpg"],
         "brandLogo": "",
@@ -38,7 +36,7 @@
         "name": "ESPONJA Y CEPILLO PARA LAVAR CARROS",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "PVC / Esponja",
+        "type": "Automotriz",
         "description": "Esponja y cepillo para lavado de automóviles",
         "images": ["assets/img/productos/info/EsponjayCepillo.jpg"],
         "brandLogo": "",
@@ -55,7 +53,7 @@
         "name": "RECOGEDOR PARA BASURA",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Plástico",
+        "type": "Limpieza",
         "description": "Recogedor para basura con mango de madera",
         "images": ["assets/img/productos/info/Recogedor.jpg"],
         "brandLogo": "",
@@ -71,7 +69,7 @@
         "name": "TOALLAS SCOTT SHOP ROLLO",
         "price": "$0.00",
         "brand": "SCOTT",
-        "material": "Papel",
+        "type": "Industrial",
         "description": "Toalla absorbente industrial en rollo",
         "images": ["assets/img/productos/info/TOALLAS SCOTT SHOP ROLLO.jpg"],
         "brandLogo": "",
@@ -87,7 +85,7 @@
         "name": "ESTOPA SUPER EXTRA BLANCA",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Algodón",
+        "type": "Industrial",
         "description": "Estopa blanca de alta calidad para limpieza",
         "images": ["assets/img/productos/info/ESTOPA SUPER EXTRA BLANCA.jpg"],
         "brandLogo": "",
@@ -104,7 +102,7 @@
         "name": "ACEITE 3 EN 1 LUSTRADOR ROJO",
         "price": "$0.00",
         "brand": "3 EN 1",
-        "material": "Aceite",
+        "type": "Ferretería",
         "description": "Aceite multiusos lubricante",
         "images": ["assets/img/productos/info/ACEITE 3 EN 1 LUSTRADOR ROJO.jpg"],
         "brandLogo": "",
@@ -121,7 +119,7 @@
         "name": "BOLSA PLÁSTICA NEGRA",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Plástico",
+        "type": "Limpieza",
         "description": "Bolsa plástica negra para basura",
         "images": ["assets/img/productos/info/BOLSA PLÁSTICA NEGRA.jpg"],
         "brandLogo": "",
@@ -142,7 +140,7 @@
         "name": "JERGA BLANCA",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Algodón",
+        "type": "Limpieza",
         "description": "Jerga blanca para limpieza",
         "images": ["assets/img/productos/info/JERGA BLANCA.jpg"],
         "brandLogo": "",
@@ -158,7 +156,7 @@
         "name": "TELA MAGITEL CAJA",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Tela",
+        "type": "Limpieza",
         "description": "Tela Magitel en caja C/25 paquetes C/6 piezas",
         "images": ["assets/img/productos/info/TELA MAGITEL CAJA.jpg"],
         "brandLogo": "",
@@ -174,7 +172,7 @@
         "name": "JALADOR DE PISO HOJA DOBLE 40 CM",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Plástico / Metal",
+        "type": "Limpieza",
         "description": "Jalador de piso con hoja doble",
         "images": ["assets/img/productos/info/JALADOR DE PISO HOJA DOBLE 40 CM.jpg"],
         "brandLogo": "",
@@ -191,7 +189,7 @@
         "name": "BRASSO LIMPIA METAL PASTA",
         "price": "$0.00",
         "brand": "BRASSO",
-        "material": "Pasta limpiadora",
+        "type": "Limpieza",
         "description": "Limpiador de metales en presentación de pasta",
         "images": ["assets/img/productos/info/BRASSO LIMPIA METAL PASTA.jpg"],
         "brandLogo": "",
@@ -207,14 +205,15 @@
         "name": "BRASSO LIMPIA METAL LÍQUIDO 75 ML",
         "price": "$0.00",
         "brand": "BRASSO",
-        "material": "Líquido",
+        "type": "Limpieza",
         "description": "Limpiador de metales líquido",
-        "images": ["assets/img/productos/info/BRASSO LIMPIA METAL LÍQUIDO 75 ML.jpg"],
+        "images": ["assets/img/productos/info/BRASSO LIMPIA METAL LÍQUIDO 75 ML.jpg","assets/img/productos/info/BRASSO LIMPIA METAL LÍQUIDO 200 ML.jpg"],
         "brandLogo": "",
         "specifications": {
         "headers": ["Código", "Tipo", "Empaque"],
         "rows": [
-            ["60586", "Liq. 75 ML", "12"]
+            ["60586", "Liq. 75 ML", "12"],
+            ["60587", "Liq. 200 ML", "12"]
         ]
         }
     },
@@ -223,7 +222,7 @@
         "name": "BRASSO LIMPIA METAL LÍQUIDO 200 ML",
         "price": "$0.00",
         "brand": "BRASSO",
-        "material": "Líquido",
+        "type": "Limpieza",
         "description": "Limpiador de metales líquido presentación grande",
         "images": ["assets/img/productos/info/BRASSO LIMPIA METAL LÍQUIDO 200 ML.jpg"],
         "brandLogo": "",
@@ -239,9 +238,9 @@
         "name": "LIMPIADOR PARA CLIMAS SERPENTIKLEEN ROSA",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Líquido",
+        "type": "Ferretería",
         "description": "Limpiador para climas tipo SERPENTIKLEEN",
-        "images": ["assets/img/productos/info/SERPENTIKLEEN.JPG"],
+        "images": ["assets/img/productos/info/SERPENTIKLEEN.jpg"],
         "brandLogo": "",
         "specifications": {
         "headers": ["Código", "Tipo", "Empaque"],
@@ -255,7 +254,7 @@
         "name": "LIMPIADOR PARA CLIMAS COIL MORADO BIODEGRADABLE",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Líquido biodegradable",
+        "type": "Ferretería",
         "description": "Limpiador para climas biodegradable",
         "images": ["assets/img/productos/info/LIMPIADOR PARA CLIMAS COIL MORADO BIODEGRADABLE.jpg"],
         "brandLogo": "",
@@ -271,7 +270,7 @@
         "name": "JALADOR DE PISO BASTÓN METÁLICO",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Metal / Hule",
+        "type": "Limpieza",
         "description": "Jalador de piso con bastón metálico",
         "images": ["assets/img/productos/info/JALADOR DE PISO BASTÓN METÁLICO.jpg"],
         "brandLogo": "",
@@ -287,7 +286,7 @@
         "name": "JALADOR DE PISO BASTÓN MADERA",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Madera / Hule",
+        "type": "Limpieza",
         "description": "Jalador de piso con bastón de madera",
         "images": ["assets/img/productos/info/JALADOR DE PISO BASTÓN MADERA.jpg"],
         "brandLogo": "",
@@ -304,7 +303,7 @@
         "name": "TRAPO INDUSTRIAL",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Tela reciclada",
+        "type": "Industrial",
         "description": "Trapo industrial 100% camiseta de color",
         "images": ["assets/img/productos/info/TRAPO INDUSTRIAL.jpg"],
         "brandLogo": "",
@@ -320,7 +319,7 @@
         "name": "LYSOL AEROSOL DESINFECTANTE BRISA DE LIMÓN",
         "price": "$0.00",
         "brand": "LYSOL",
-        "material": "Aerosol",
+        "type": "Limpieza",
         "description": "Desinfectante en aerosol aroma brisa de limón",
         "images": ["assets/img/productos/info/LYSOL AEROSOL DESINFECTANTE BRISA DE LIMÓN.jpg"],
         "brandLogo": "",
@@ -336,7 +335,7 @@
         "name": "LYSOL AEROSOL DESINFECTANTE CASCADA DE PRIMAVERA",
         "price": "$0.00",
         "brand": "LYSOL",
-        "material": "Aerosol",
+        "type": "Limpieza",
         "description": "Desinfectante en aerosol aroma cascada de primavera",
         "images": ["assets/img/productos/info/LYSOL AEROSOL DESINFECTANTE CASCADA DE PRIMAVERA.jpg"],
         "brandLogo": "",
@@ -352,7 +351,7 @@
         "name": "DISPLAY CON 58 ARTÍCULOS DE LIMPIEZA REYNERA",
         "price": "$0.00",
         "brand": "REYNERA",
-        "material": "Mixto",
+        "type": "Limpieza",
         "description": "Display surtido con artículos de limpieza",
         "images": ["assets/img/productos/info/DISPLAY CON 58 ARTÍCULOS DE LIMPIEZA REYNERA.jpg"],
         "brandLogo": "",
@@ -368,7 +367,7 @@
         "name": "FRANELA ROLLO 50 CM X 25 MTS",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Tela",
+        "type": "Limpieza",
         "description": "Franela en rollo para limpieza",
         "images": ["assets/img/productos/info/FRANELA ROLLO 50 CM X 25 MTS.jpg"],
         "brandLogo": "",
@@ -386,7 +385,7 @@
         "name": "ESCOBA PEÑOLERA DOCENA",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Fibra natural",
+        "type": "Limpieza",
         "description": "Escoba peñolera en presentación docena",
         "images": ["assets/img/productos/info/ESCOBA PEÑOLERA DOCENA.jpg"],
         "brandLogo": "",
@@ -403,7 +402,7 @@
         "name": "ESCOBA PEÑOLERA MEDIA DOCENA",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Fibra natural",
+        "type": "Limpieza",
         "description": "Escoba peñolera media docena",
         "images": ["assets/img/productos/info/ESCOBA PEÑOLERA MEDIA DOCENA.jpg"],
         "brandLogo": "",
@@ -420,7 +419,7 @@
         "name": "ESCOBA MEDIANA DOCENA",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Fibra sintética",
+        "type": "Limpieza",
         "description": "Escoba mediana presentación docena",
         "images": ["assets/img/productos/info/ESCOBA MEDIANA DOCENA.jpg"],
         "brandLogo": "",
@@ -436,7 +435,7 @@
         "name": "ESCOBA PLÁSTICO MEDIANA",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Plástico",
+        "type": "Limpieza",
         "description": "Escoba plástica mediana con mango de madera",
         "images": ["assets/img/productos/info/ESCOBA PLÁSTICO MEDIANA.jpg"],
         "brandLogo": "",
@@ -452,7 +451,7 @@
         "name": "CEPILLO DE IXTLE NACIONAL ECONÓMICO",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Ixtle",
+        "type": "Limpieza",
         "description": "Cepillo de ixtle económico",
         "images": ["assets/img/productos/info/CEPILLO DE IXTLE NACIONAL ECONÓMICO.jpg"],
         "brandLogo": "",
@@ -468,7 +467,7 @@
         "name": "CEPILLO DE IXTLE EXPORTACIÓN",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Ixtle",
+        "type": "Limpieza",
         "description": "Cepillo de ixtle para exportación",
         "images": ["assets/img/productos/info/CEPILLO DE IXTLE EXPORTACIÓN.jpg"],
         "brandLogo": "",
@@ -484,7 +483,7 @@
         "name": "MANGO DE MADERA",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Madera",
+        "type": "Limpieza",
         "description": "Mango de madera para escoba o cepillo",
         "images": ["assets/img/productos/info/MANGO DE MADERA.jpg"],
         "brandLogo": "",
@@ -502,7 +501,7 @@
         "name": "TRAPEADOR MICRO TOALLA DOCENA",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Microfibra",
+        "type": "Limpieza",
         "description": "Trapeador de micro toalla",
         "images": ["assets/img/productos/info/TRAPEADOR MICRO TOALLA DOCENA.jpg"],
         "brandLogo": "",
@@ -518,7 +517,7 @@
         "name": "TRAPEADOR DOCENA HILO MAGITEL",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Hilo",
+        "type": "Limpieza",
         "description": "Trapeador de hilo Magitel",
         "images": ["assets/img/productos/info/TRAPEADOR DOCENA HILO MAGITEL.jpg"],
         "brandLogo": "",
@@ -534,7 +533,7 @@
         "name": "TRAPEADOR MEDIA DOCENA",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Hilo",
+        "type": "Limpieza",
         "description": "Trapeador media docena",
         "images": ["assets/img/productos/info/TRAPEADOR MEDIA DOCENA.jpg"],
         "brandLogo": "",
@@ -552,7 +551,7 @@
         "name": "TRAPEADOR DOCENA",
         "price": "$0.00",
         "brand": "INFAB",
-        "material": "Hilo",
+        "type": "Limpieza",
         "description": "Trapeador presentación docena",
         "images": ["assets/img/productos/info/TRAPEADOR DOCENA.jpg"],
         "brandLogo": "",
@@ -569,7 +568,7 @@
         "name": "BRASSO AROMAS",
         "price": "$0.00",
         "brand": "BRASSO",
-        "material": "Líquido",
+        "type": "Limpieza",
         "description": "Limpiador aromatizante para superficies",
         "images": ["assets/img/productos/info/BRASSO AROMAS.jpg"],
         "brandLogo": "",
@@ -586,7 +585,7 @@
         "name": "HARPIC POWER ULTRA TODO EN 1",
         "price": "$0.00",
         "brand": "HARPIC",
-        "material": "Líquido",
+        "type": "Limpieza",
         "description": "Limpiador para WC todo en uno",
         "images": ["assets/img/productos/info/HARPIC POWER ULTRA TODO EN 1.jpg"],
         "brandLogo": "",
@@ -602,7 +601,7 @@
         "name": "AROMATIZANTE GLADE 400 ML",
         "price": "$0.00",
         "brand": "GLADE",
-        "material": "Aerosol",
+        "type": "Aromatizantes",
         "description": "Aromatizante ambiental en aerosol",
         "images": ["assets/img/productos/info/AROMATIZANTE GLADE 400 ML.jpg"],
         "brandLogo": "",
@@ -624,7 +623,7 @@
         "name": "AROMATIZANTE GLADE CON REPUESTO",
         "price": "$0.00",
         "brand": "GLADE",
-        "material": "Aromatizante",
+        "type": "Aromatizantes",
         "description": "Aromatizante Glade con repuesto",
         "images": ["assets/img/productos/info/AROMATIZANTE GLADE CON REPUESTO.jpg"],
         "brandLogo": "",
@@ -640,7 +639,7 @@
         "name": "CANASTILLA PARA SANITARIO MR. MUSCULO",
         "price": "$0.00",
         "brand": "MR. MUSCULO",
-        "material": "Gel",
+        "type": "Aromatizantes",
         "description": "Canastilla aromatizante para sanitario",
         "images": ["assets/img/productos/info/CANASTILLA PARA SANITARIO MR. MUSCULO.jpg"],
         "brandLogo": "",
@@ -656,7 +655,7 @@
         "name": "AROMATIZANTE P/AUTO GLADE",
         "price": "$0.00",
         "brand": "GLADE",
-        "material": "Papel aromatizado",
+        "type": "Aromatizantes",
         "description": "Aromatizante ambiental en papel",
         "images": ["assets/img/productos/info/AROMATIZANTE P-AUTO GLADE.jpg"],
         "brandLogo": "",
@@ -672,7 +671,7 @@
         "name": "DESTAPADOR LÍQUIDO",
         "price": "$0.00",
         "brand": "HARPIC",
-        "material": "Líquido",
+        "type": "Limpieza",
         "description": "Destapador líquido para drenajes",
         "images": ["assets/img/productos/info/DESTAPADOR LÍQUIDO.jpg"],
         "brandLogo": "",
@@ -688,7 +687,7 @@
         "name": "LIMPIADOR PLEDGE ORIGINAL MADERAS",
         "price": "$0.00",
         "brand": "PLEDGE",
-        "material": "Aerosol",
+        "type": "Limpieza",
         "description": "Limpiador para muebles de madera",
         "images": ["assets/img/productos/info/LIMPIADOR PLEDGE ORIGINAL MADERAS.jpg"],
         "brandLogo": "",
@@ -704,7 +703,7 @@
         "name": "LIMPIADOR LÍQUIDO GEL PATO PINO VERDE",
         "price": "$0.00",
         "brand": "PATO",
-        "material": "Gel",
+        "type": "Limpieza",
         "description": "Limpiador de WC aroma pino",
         "images": ["assets/img/productos/info/LIMPIADOR LÍQUIDO GEL PATO PINO VERDE.jpg"],
         "brandLogo": "",
@@ -720,7 +719,7 @@
         "name": "LIMPIADOR LÍQUIDO GEL PATO BRISA DE MAR AZUL",
         "price": "$0.00",
         "brand": "PATO",
-        "material": "Gel",
+        "type": "Limpieza",
         "description": "Limpiador de WC aroma brisa de mar",
         "images": ["assets/img/productos/info/LIMPIADOR LÍQUIDO GEL PATO BRISA DE MAR AZUL.jpg"],
         "brandLogo": "",
@@ -736,7 +735,7 @@
         "name": "INSECTICIDA RAID CASA Y JARDIN NARANJA",
         "price": "$0.00",
         "brand": "RAID",
-        "material": "Aerosol",
+        "type": "Insecticidas",
         "description": "Insecticida para uso en casa y jardín con aroma naranja",
         "images": ["assets/img/productos/info/INSECTICIDA RAID CASA Y JARDIN NARANJA.jpg"],
         "brandLogo": "",
@@ -752,7 +751,7 @@
         "name": "DESTAPACAÑOS LIQUIDO DRANO MAX GEL",
         "price": "$0.00",
         "brand": "DRANO",
-        "material": "Liquido",
+        "type": "Limpieza",
         "description": "Destapacaños líquido de alta efectividad",
         "images": ["assets/img/productos/info/DESTAPACAÑOS LIQUIDO DRANO MAX GEL.jpg"],
         "brandLogo": "",
@@ -768,7 +767,7 @@
         "name": "EASY OFF PASTA REGULAR",
         "price": "$0.00",
         "brand": "EASY OFF",
-        "material": "Pasta",
+        "type": "Limpieza",
         "description": "Limpiador en pasta para remover grasa difícil",
         "images": ["assets/img/productos/info/EASY OFF PASTA REGULAR.jpg"],
         "brandLogo": "",
@@ -784,7 +783,7 @@
         "name": "INSECTICIDA RAID CASA Y JARDIN",
         "price": "$0.00",
         "brand": "RAID",
-        "material": "Aerosol",
+        "type": "Insecticidas",
         "description": "Insecticida para control de insectos en casa y jardín",
         "images": ["assets/img/productos/info/INSECTICIDA RAID CASA Y JARDIN.jpg"],
         "brandLogo": "",
@@ -800,7 +799,7 @@
         "name": "LIMPIADOR LIQUIDO MR. MUSCULO CRYSTAL RAIN",
         "price": "$0.00",
         "brand": "MR. MUSCULO",
-        "material": "Liquido",
+        "type": "Limpieza",
         "description": "Limpiador líquido multiusos sin amoniaco",
         "images": ["assets/img/productos/info/LIMPIADOR LIQUIDO MR. MUSCULO CRYSTAL RAIN.jpg"],
         "brandLogo": "",
@@ -816,7 +815,7 @@
         "name": "LIMPIADOR LIQUIDO MR. MUSCULO WINDEX",
         "price": "$0.00",
         "brand": "MR. MUSCULO",
-        "material": "Liquido",
+        "type": "Limpieza",
         "description": "Limpiador líquido para cristales y superficies",
         "images": ["assets/img/productos/info/LIMPIADOR LIQUIDO MR. MUSCULO WINDEX.jpg"],
         "brandLogo": "",
@@ -832,7 +831,7 @@
         "name": "INSECTICIDA BAYGON CASA Y JARDIN",
         "price": "$0.00",
         "brand": "BAYGON",
-        "material": "Aerosol",
+        "type": "Insecticidas",
         "description": "Insecticida para uso doméstico y áreas exteriores",
         "images": ["assets/img/productos/info/INSECTICIDA BAYGON CASA Y JARDIN.jpg"],
         "brandLogo": "",
@@ -849,7 +848,7 @@
         "name": "INSECTICIDA RAID RAIDOLITOS CON 10",
         "price": "$0.00",
         "brand": "RAID",
-        "material": "Espiral",
+        "type": "Insecticidas",
         "description": "Insecticida en espiral para control de mosquitos",
         "images": ["assets/img/productos/info/INSECTICIDA RAID RAIDOLITOS CON 10.jpg"],
         "brandLogo": "",
@@ -865,7 +864,7 @@
         "name": "INSECTICIDA RAID MAX AEROSOL MATA CUCARACHA",
         "price": "$0.00",
         "brand": "RAID",
-        "material": "Aerosol",
+        "type": "Insecticidas",
         "description": "Insecticida aerosol de máxima acción contra cucarachas",
         "images": ["assets/img/productos/info/INSECTICIDA RAID MAX AEROSOL MATA CUCARACHA.jpg"],
         "brandLogo": "",
@@ -882,7 +881,7 @@
     "name": "DISCO DE CORTE TIPO CUBO",
     "price": "$0.00",
     "brand": "AUSTROMEX",
-    "material": "Disco abrasivo",
+    "type": "Ferretería",
     "description": "Disco de corte tipo cubo para metal y piedra en diferentes líneas y dimensiones",
     "images": ["assets/img/productos/info/DISCO DE CORTE TIPO CUBO.jpg", "assets/img/productos/info/DISCO DE CORTE TIPO CUBO2.jpg", "assets/img/productos/info/DISCO DE CORTE TIPO CUBO3.jpg"
 , "assets/img/productos/info/DISCO DE CORTE TIPO CUBO4.jpg","assets/img/productos/info/DISCO DE CORTE TIPO CUBO14.jpg"],
@@ -909,7 +908,7 @@
     "name": "DISCO TIPO 27 DESBASTE DE METAL TIPO CUBO",
     "price": "$0.00",
     "brand": "AUSTROMEX",
-    "material": "Disco abrasivo",
+    "type": "Ferretería",
     "description": "Disco tipo 27 para desbaste de metal, tipo cubo, en varias líneas y dimensiones",
     "images": ["assets/img/productos/info/DISCOS TIPO 27 - DESBASTE DE METAL- TIPO CUBO.jpg","assets/img/productos/info/DISCOS TIPO 27 - DESBASTE DE METAL- TIPO CUBO2.jpg",
 "assets/img/productos/info/DISCOS TIPO 27 - DESBASTE DE METAL- TIPO CUBO3.jpg","assets/img/productos/info/DISCOS TIPO 27 - DESBASTE DE METAL- TIPO CUBO4.jpg"],
@@ -930,9 +929,449 @@
         ["72988", "562", "HUM", "6650", "9\" x 1/4\" x 7/8\"", "230 x 6.4 x 22.2", "25", "METAL"]
       ]
     }
+  },
+  {
+    "id": 56,
+    "name": "DISCOS DE CORTE (METAL, INOX, PIEDRA)",
+    "price": "$0.00",
+    "brand": "AUSTROMEX",
+    "type": "Ferretería",
+    "description": "Discos abrasivos para corte de diversos materiales como metal, acero inoxidable y piedra en diferentes diámetros y espesores.",
+    "images": ["assets/img/productos/info/DISCOS DE CORTE (METAL, INOX, PIEDRA).jpg", "assets/img/productos/info/DISCOS DE CORTE (METAL, INOX, PIEDRA)2.jpg","assets/img/productos/info/DISCOS DE CORTE (METAL, INOX, PIEDRA)3.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Código", "Clave", "Linea", "Max. RPM", "Dimension (in)", "Dimension (mm)", "Empaq", "Uso"],
+      "rows": [
+        ["72965", "863", "MAGMA", "13,300", "4-1/2\" x 1/32\" x 7/8\"", "115X0.75X22.23", "25", "METAL"],
+        ["72963", "778", "HUM", "13,300", "4-1/2\" x .040\" x 7/8\"", "115X1X22.23", "50", "METAL"],
+        ["72995", "3302", "IMPERIAL", "13,300", "4-1/2\" x .040\" x 7/8\"", "115X1X22.23", "25", "INOX"],
+        ["59635", "750", "PREMIUM", "13,300", "4-1/2\"X3/64\"X7/8\"", "115X1X22.2", "50", "INOX"],
+        ["59399", "709", "PREMIUM", "13,300", "4-1/2\"X3/64\"X7/8\"", "115X1X22.2", "50", "METAL"],
+        ["59398", "710", "INDUSTRIAL", "13,300", "4-1/2\"X3/64\"X7/8\"", "115X1X22.2", "50", "METAL"],
+        ["59644", "751", "INDUSTRIAL", "13,300", "4-1/2\"X3/64\"X7/8\"", "115X1X22.2", "50", "INOX"],
+        ["72939", "781", "HUM", "13,300", "4-1/2\"X.04\"X7/8\"", "115X1X22.2", "50", "INOX"],
+        ["60999", "2014", "EASY CUT", "13,300", "4-1/2\"X.04\"X7/8\"", "115X1X22.2", "50", "METAL"],
+        ["51568", "761", "FASTCUT", "13,300", "4-1/2\"X1/16\"X7/8\"", "115X1.6X22.2", "25", "METAL"],
+        ["59675", "2117", "EASY CUT", "13,300", "4-1/2\"X3/32\"X7/8\"", "115X2.4X22.2", "25", "PIEDRA"],
+        ["65109", "2015", "EASY CUT", "4,400", "4-1/2X0,040X7/8", "115X1X22.23", "50", "INOX"],
+        ["00342", "759", "CHIP-CUT", "8,500", "7\"X1/8\"X5/8\"", "180X3X15.88", "25", "METAL"],
+        ["72977", "2018", "EASY -CUT", "8,500", "7\"X1/16X 7/8\"", "180X1.5X22.23", "25", "METAL"],
+        ["58063", "738", "FAST-CUT", "5,100", "12\" x 1/8 x 1", "300 x 3.2 x 25.4", "10", "ACERO"],
+        ["72940", "744", "PLUS", "4,400", "14\"X1/8\"X1\"", "350X3.2X25.4", "25", "METAL"],
+        ["00333", "739", "CHIP-CUT", "4,400", "14\"X1/8\"X1\"", "350X3.2X25.4", "10", "METAL"],
+        ["51895", "758", "EASY CUT", "4,400", "14\"X1/8\"X1\"", "350X3.2X25.4", "10", "METAL"],
+        ["59696", "733", "HUM", "4,400", "14\"X1/8\"X1\"", "350X3.2X25.4", "25", "METAL"],
+        ["60891", "746", "CLÁSICA", "4,400", "14\" x 1/8\" x 1\"", "350X3.2X25.4", "10", "INOX"],
+        ["72914", "742", "FAST-CUT", "4,400", "14\" x 1/8\" x 1\"", "350X3.2X25.4", "10", "METAL"]
+      ]
+    }
+  },
+  {
+    "id": 57,
+    "name": "DISCO PLANO PARA CORTE MULTIPROPOSITO TIPO 41",
+    "price": "$0.00",
+    "brand": "AUSTROMEX",
+    "type": "Ferretería",
+    "description": "Disco multipropósito para corte de metal, inoxidable, aluminio, cobre, latón, piedra, pvc, loseta cerámica y azulejo.",
+    "images": ["assets/img/productos/info/DISCO PLANO PARA CORTE MULTIPROPOSITO.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Código", "Clave", "Dimensiones", "Max. RPM", "Linea"],
+      "rows": [
+        ["72968", "708", "4-1/2X0.045X7/8\"", "13,300", "TOTAL CUT"]
+      ]
+    }
+  },
+  {
+    "id": 58,
+    "name": "DISCO P/ CORTAR MADERA TUNGSTENO",
+    "price": "$0.00",
+    "brand": "TENAZIT",
+    "type": "Ferretería",
+    "description": "Sierra de carburo de tungsteno excelente para corte de madera, madera con clavos, aglomerado, plástico, mdf, fibra de vidrio, resina epóxica y parquet laminado.",
+    "images": ["assets/img/productos/info/DISCO PARA CORTAR MADERA.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Código", "Clave", "Dimensiones", "Max. RPM", "Linea"],
+      "rows": [
+        ["72966", "162", "4-1/2 x 7/8", "13,300", "TENAZIT"]
+      ]
+    }
+  },
+  {
+    "id": 59,
+    "name": "DISCOS DE DIAMANTE (CONTINUO, SEGMENTADO, TURBO)",
+    "price": "$0.00",
+    "brand": "AUSTROMEX",
+    "type": "Ferretería",
+    "description": "Línea completa de discos de diamante para corte de materiales de construcción, piedra y cerámica.",
+    "images": ["assets/img/productos/info/DISCOS DE DIAMANTE.jpg", "assets/img/productos/info/DISCOS DE DIAMANTE2.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Código", "Clave", "Linea", "Max. RPM", "Dimension (in)", "Dimension (mm)", "Empa.", "Rin"],
+      "rows": [
+        ["58210", "1501", "EASY CUT", "14,500", "4\"X.06\"X7/8\"", "100X1.6X22.2", "1", "CONTINUO"],
+        ["58139", "1504", "EASY CUT", "14,500", "4\"X.08\"X7/8\"", "100X2X22.2", "1", "SEGM"],
+        ["60991", "2554", "HUM", "14,500", "4\"X.08\"X7/8\"", "100X2X22.2", "1", "TURBO"],
+        ["60992", "2555", "HUM", "13,200", "4-1/2\"X.07\"X7/8\"", "115X1.8X22.2", "1", "SEGM"],
+        ["60993", "2556", "HUM", "13,200", "4-1/2\"X.08\"X7/8\"", "115X2X22.2", "1", "CONTINUO"],
+        ["72997", "3252", "ECO DIAMOND", "13,200", "4-1/2\"X .075\"X7/8\"", "115X1.9X22.23", "1", "SEGM"],
+        ["72999", "3254", "ECO DIAMOND", "13,300", "4-1/2\"X .080\"X7/8\"", "115X 2 X 22.23", "1", "TURBO"],
+        ["72998", "3253", "ECO DIAMOND", "14,500", "4-1/2\"X .075\"X7/8\"", "115X 2 X 22.23", "1", "CONTINUO"],
+        ["72911", "2560", "HUM", "8,500", "7\"x0.095\"x7/8\"", "180X2.4X22.2", "10", "TURBO"],
+        ["58209", "1503", "EASY CUT", "8,500", "7\"X.08\"X7/8\"", "175X2X22.2", "1", "CONTINUO"],
+        ["58137", "1507", "EASY CUT", "8,500", "7\"X.08\"X7/8\"", "175X2X22.2", "1", "SEGM"],
+        ["72912", "2559", "HUM", "8,500", "7\"x0.095\"x7/8\"", "180X2X22.2", "10", "CONTINUO"],
+        ["65112", "2558", "HUM", "8,500", "7\"x0.095\"x7/8\"", "180X2.2X22.2", "10", "SEGM"],
+        ["72990", "1510", "EASY CUT", "8,700", "9\"X2X7/8\"", "225X2X22.2", "1", "CONTINUO"]
+      ]
+    }
+  },
+  {
+    "id": 60,
+    "name": "DISCO DE DIAMANTE BLANCO RIN CONTINUO PORCELANATO",
+    "price": "$0.00",
+    "brand": "AUSTROMEX",
+    "type": "Ferretería",
+    "description": "Usos: Loseta cerámica, porcelanato duro y mármol.",
+    "images": ["assets/img/productos/info/DISCO DE DIAMANTE BLANCO RIN CONTINUO PORCELANATO.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Código", "Clave", "Dimensiones", "Max. RPM", "Linea"],
+      "rows": [
+        ["72991", "815", "4-1/2\"X1.6X7/8\"", "13,200", "EASY CUT"],
+        ["72989", "816", "7\"X1.6X7/8\"", "8,600", "EASY CUT"]
+      ]
+    }
+  },
+  {
+    "id": 61,
+    "name": "DISCO LAMINADO CON RESPALDO DE PLÁSTICO",
+    "price": "$0.00",
+    "brand": "TENAZIT",
+    "type": "Ferretería",
+    "description": "Usos: Acero al carbón, acero inoxidable y soldadura.",
+    "images": ["assets/img/productos/info/DISCO LAMINADO CON RESPALDO DE PLÁSTICO.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Código", "Dimension", "Clave", "Grano", "Linea", "Emp"],
+      "rows": [
+        ["72945", "115X22.2", "2216", "40", "HUM", "5"],
+        ["72946", "115X22.2", "2217", "60", "HUM", "5"],
+        ["72947", "115X22.3", "2218", "80", "HUM", "5"]
+      ]
+    }
+  },
+  {
+    "id": 62,
+    "name": "LLAVES HEXAGONALES ALLEN BONDHUS (PULGADAS Y MM)",
+    "price": "$0.00",
+    "brand": "BONDHUS",
+    "type": "Ferretería",
+    "description": "Llaves hexagonales de alta resistencia en medidas estándar y milimétricas.",
+    "images": ["assets/img/productos/info/LLAVES HEXAGONALES ALLEN BONDHUS.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Código", "Medida", "Clave", "Empaque"],
+      "rows": [
+        ["60858", "1/16\"", "B111-15803", "1 PZA."],
+        ["60867", "5/64\"", "B111-15804", "1 PZA."],
+        ["60352", "3/32\"", "B111-15805", "1 PZA."],
+        ["60353", "7/64\"", "B111-15806", "1 PZA."],
+        ["60354", "1/8\"", "B111-15807", "1 PZA."],
+        ["60355", "9/64\"", "B111-15808", "1 PZA."],
+        ["60356", "5/32\"", "B111-15809", "1 PZA."],
+        ["60357", "3/16\"", "B111-15810", "1 PZA."],
+        ["60358", "7/32\"", "B111-15811", "1 PZA."],
+        ["60359", "1/4\"", "B111-15812", "1 PZA."],
+        ["60866", "5/16\"", "B111-15813", "1 PZA."],
+        ["60864", "3/8\"", "B111-15814", "1 PZA."],
+        ["60870", "7/16\"", "B111-15815", "1 PZA."],
+        ["60860", "1/2\"", "B111-15816", "1 PZA."],
+        ["60859", "1.5 MM", "B112-15850", "1 PZA."],
+        ["60861", "2.0 MM", "B112-15852", "1 PZA."],
+        ["60862", "2.5 MM", "B112-15854", "1 PZA."],
+        ["60863", "3.0 MM", "B112-15856", "1 PZA."],
+        ["60865", "4.0 MM", "B112-15860", "1 PZA."],
+        ["60368", "5.0 MM", "B112-15864", "1 PZA."],
+        ["60369", "6.0 MM", "B112-15868", "1 PZA."],
+        ["60868", "7.0 MM", "B112-15870", "1 PZA."],
+        ["60370", "8.0 MM", "B112-15872", "1 PZA."],
+        ["60422", "9.0 MM", "B112-15874", "1 PZA."],
+        ["60371", "10.0 MM", "B112-15876", "1 PZA."]
+      ]
+    }
+  },
+  {
+    "id": 63,
+    "name": "LLAVE TORX (LARGA Y CORTA)",
+    "price": "$0.00",
+    "brand": "BONDHUS",
+    "type": "Ferretería",
+    "description": "Llaves tipo Torx para aplicaciones de precisión en diferentes tamaños.",
+    "images": ["assets/img/productos/info/LLAVE TORX.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Código", "Tipo/Clave", "Empaque"],
+      "rows": [
+        ["60395", "T-6 B421-32806", "1 PZA."],
+        ["60408", "T-7 B421-32807", "1 PZA."],
+        ["60409", "T-8 B421-32808", "1 PZA."],
+        ["60389", "T-5 B1411-32705", "1 PZA."],
+        ["60390", "T-6 B1411-32706", "1 PZA."],
+        ["60401", "T-40 B1411-32740", "1 PZA."],
+        ["60407", "T-60 B1411-32760", "1 PZA."]
+      ]
+    }
+  },
+  {
+    "id": 64,
+    "name": "JUEGOS DE LLAVES HEXAGONALES Y ALLEN (PUNTA BOLA / NAVAJA)",
+    "price": "$0.00",
+    "brand": "BONDHUS",
+    "type": "Ferretería",
+    "description": "Juegos de llaves hexagonales en formato estándar y milimétrico, incluyendo modelos tipo navaja y puntas de bola para fácil acceso.",
+    "images": ["assets/img/productos/info/JUEGOS DE LLAVES HEXAGONALES Y ALLEN.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Código", "Clave", "Medida/Pzs", "Empaque"],
+      "rows": [
+        ["60857", "B123-10937", "13 PZS STD (.050 - 3/8)", "6"],
+        ["60382", "B123-10938", "10 PZS STD (1/16 - 1/4)", "6"],
+        ["60855", "B124-10999", "9 PZS MM (1.5 - 10 MM)", "6"],
+        ["60856", "B124-10946", "6 PZS MM (1.5 - 5 MM)", "6"],
+        ["60376", "B301-12589", "9 PZS STD NAVAJA (5/64 - 1/4)", "6"],
+        ["60377", "B301-12591", "9 PZS STD NAVAJA (.50 - 3/16)", "6"],
+        ["60378", "B302-12592", "7 PZS MM NAVAJA (1.5 - 6.0 MM)", "6"],
+        ["60379", "B302-12587", "7 PZS MM NAVAJA (2.0 - 8.0 MM)", "6"]
+      ]
+    }
+  },
+  {
+    "id": 65,
+    "name": "CENTROS DE CARGA STARSYS",
+    "price": "$0.00",
+    "brand": "BTICINO",
+    "type": "Eléctrico",
+    "description": "Centros de carga Starsys",
+    "images": ["assets/img/productos/info/CENTROS DE CARGA STARSYS.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Código", "Clave", "Tipo/Amps", "Empaque"],
+      "rows": [
+        ["53794", "ST502", "CENTRO DE CARGA 2 POLOS", "10"]
+      ]
+    }
+  },
+  {
+    "id": 66,
+    "name": "CENTRO CARGA 2 UNID. EMPOTRAR",
+    "price": "$0.00",
+    "brand": "BTICINO",
+    "type": "Eléctrico",
+    "description": "Centros de carga para empotrar o sobreponer y unidades térmicas (interruptores) de 1, 2 y 3 polos.",
+    "images": ["assets/img/productos/info/CENTRO CARGA 2 UNID. EMPOTRAR.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Código", "Clave", "Tipo/Amps", "Empaque"],
+      "rows": [
+        ["53752", "BTN-2E", "CENTRO CARGA 2 UNID. EMPOTRAR", "10"]
+      ]
+    }
+  },        
+  {
+        "id": 67,
+        "name": "CENTRO CARGA 4 UNID. EMPOTRAR o SOBREPONER",
+        "price": "$0.00",
+        "brand": "BTICINO",
+        "type": "Eléctrico",
+        "description": "Centros de carga para empotrar o sobreponer y unidades térmicas (interruptores) de 1, 2 y 3 polos.",
+        "images": ["assets/img/productos/info/CENTRO CARGA 4 UNID. EMPOTRAR.jpg"],
+        "brandLogo": "",
+        "specifications": {
+        "headers": ["Código", "Clave", "Tipo/Amps", "Empaque"],
+        "rows": [
+            ["53753", "BTN4EN", "CENTRO CARGA 4 UNID. EMPOTRAR", "3"],
+            ["53779", "BTN4S", "CENTRO CARGA 4 UNID. SOBREPONER", "3"]
+        ]
+        }
+   }, 
+    {
+            "id": 68,
+            "name": "CENTRO CARGA 8 UNID. EMPOTRAR",
+            "price": "$0.00",
+            "brand": "BTICINO",
+            "type": "Eléctrico",
+            "description": "Centros de carga para empotrar o sobreponer y unidades térmicas (interruptores) de 1, 2 y 3 polos.",
+            "images": ["assets/img/productos/info/CENTRO CARGA 8 UNID. EMPOTRAR.jpg"],
+            "brandLogo": "",
+            "specifications": {
+            "headers": ["Código", "Clave", "Tipo/Amps", "Empaque"],
+            "rows": [
+                 ["53796", "BTN8EN", "CENTRO CARGA 8 UNID. EMPOTRAR", "1"]
+            ]
+            }
+    }, 
+      {
+            "id": 69,
+            "name": "UNIDADES TÉRMICAS",
+            "price": "$0.00",
+            "brand": "BTICINO",
+            "type": "Eléctrico",
+            "description": "Centros de carga para empotrar o sobreponer y unidades térmicas (interruptores) de 1, 2 y 3 polos.",
+            "images": ["assets/img/productos/info/UNIDADES TÉRMICAS.jpg"],
+            "brandLogo": "",
+            "specifications": {
+            "headers": ["Código", "Clave", "Tipo/Amps", "Empaque"],
+            "rows": [
+                ["76407", "BTN3/30", "UNIDAD TÉRMICA 3 POLOS 30A", "4"],
+                ["76408", "BTN3/60", "UNIDAD TÉRMICA 3 POLOS 60A", "4"],
+                ["53784", "BTN2/15", "UNIDAD TÉRMICA 2 POLOS 15A", "6"],
+                ["53785", "BTN2/20", "UNIDAD TÉRMICA 2 POLOS 20A", "6"],
+                ["53786", "BTN2/30", "UNIDAD TÉRMICA 2 POLOS 30A", "6"],
+                ["53790", "BTN2/40", "UNIDAD TÉRMICA 2 POLOS 40A", "6"],
+                ["53835", "BTN2/50", "UNIDAD TÉRMICA 2 POLOS 50A", "6"],
+                ["54074", "BTN2/60", "UNIDAD TÉRMICA 2 POLOS 60A", "6"],
+                ["53782", "BTN1/10", "UNIDAD TÉRMICA 1 POLO 10A", "12"],
+                ["53756", "BTN1/15", "UNIDAD TÉRMICA 1 POLO 10A", "12"],
+                ["53755", "BTN1/20", "UNIDAD TÉRMICA 1 POLO 10A", "12"],
+                ["53754", "BTN1/30", "UNIDAD TÉRMICA 1 POLO 10A", "12"],
+                ["53757", "BTN1/40", "UNIDAD TÉRMICA 1 POLO 10A", "12"],
+                ["53758", "BTN1/50", "UNIDAD TÉRMICA 1 POLO 10A", "12"],
+                ["53781", "BTN1/60", "UNIDAD TÉRMICA 1 POLO 60A", "12"]
+            ]
+            }
+    }, 
+    {
+            "id": 70,
+            "name": "CANALETA",
+            "price": "$0.00",
+            "brand": "BTICINO",
+            "type": "Eléctrico",
+            "description": "Centros de carga para empotrar o sobreponer y unidades térmicas (interruptores) de 1, 2 y 3 polos.",
+            "images": ["assets/img/productos/info/CANALETA.jpg"],
+            "brandLogo": "",
+            "specifications": {
+            "headers": ["Código", "Clave", "Medida", "Via", "Empaque"],
+            "rows": [
+                ["53765", "D02012", " 20x12x2.10M", "1","45"],
+                ["53836", "D12012", " 20x12x2.10M con adhesivo", "1","45"]
+            ]
+            }
+    },
+
+  {
+    "id": 71,
+    "name": "BROCHAS Y RODILLOS PARA PINTAR",
+    "price": "$0.00",
+    "brand": "BYP",
+    "type": "Ferretería",
+    "description": "Línea completa de brochas (Súper, Regia, Buena, Camelus) y rodillos para aplicación de pinturas y barnices.",
+    "images": ["assets/img/productos/info/BROCHAS Y RODILLOS PARA PINTAR.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Código", "Medida", "Línea", "Caja"],
+      "rows": [
+        ["59247", "1\"", "LA SUPER", "24"],
+        ["59252", "4\"", "LA SUPER", "12"],
+        ["58909", "1/2\"", "LA REGIA", "24"],
+        ["58914", "4\"", "LA REGIA", "12"],
+        ["58900", "1/2\"", "LA BUENA", "24"],
+        ["59275", "1/2\"", "CAMELUS", "12"],
+        ["58920", "1\"", "RODILLO ECONO-ROLL 9\"", "100"],
+        ["58919", "1-1/4\"", "RODILLO MEGAROLL 9\"", "100"]
+      ]
+    }
+  },
+  {
+    "id": 72,
+    "name": "CANDADOS DE SEGURIDAD MASTER LOCK",
+    "price": "$0.00",
+    "brand": "MASTER LOCK",
+    "type": "Ferretería",
+    "description": "Candados de combinación, bloqueo, laminados y de latón sólido para máxima protección.",
+    "images": ["assets/img/productos/info/CANDADOS DE SEGURIDAD MASTER LOCK.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Código", "Clave", "Medida/Tipo", "Caja"],
+      "rows": [
+        ["05772", "175D", "COMBINACIÓN LATÓN 2\"", "4 PZS"],
+        ["05773", "410RED", "BLOQUEO ROJO 38x6 MM", "6 PZS"],
+        ["05774", "3008D", "LAMINADOS 4 PZAS", "16 JGOS"],
+        ["05825", "3-D", "MASTER EN BLISTER", "24"],
+        ["74480", "675ESPD", "PARA CORTINA LATÓN SÓLIDO", "4"],
+        ["74482", "740ESPD", "ZAMAC GANCHO CORTO INDIV.", "INDIV."],
+        ["74485", "740ESPDLF", "ZAMAC GANCHO LARGO INDIV.", "INDIV."]
+      ]
+    }
+  },
+  {
+    "id": 73,
+    "name": "ORGANIZADORES Y EXHIBIDORES DE CARBONES",
+    "price": "$0.00",
+    "brand": "AVANTE",
+    "type": "Ferretería",
+    "description": "Sistemas de organización metálicos y plásticos para escobillas de carbón, incluyen selección de modelos más vendidos.",
+    "images": ["assets/img/productos/info/ORGANIZADORES Y EXHIBIDORES DE CARBONES.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Código", "Clave", "Tipo", "Empaque"],
+      "rows": [
+        ["71318", "PAQ-26-5P", "ORGANIZADOR PLÁSTICO", "1"],
+        ["71120", "PAQ-049", "ORGANIZADOR METÁLICO", "1"],
+        ["71220", "PAQ-0105", "ORGANIZADOR METÁLICO", "METÁLICO"],
+        ["71221", "EX-ECO100", "EXHIBIDOR FÍSICO", "1"],
+        ["71172", "PAQ-26-3P", "ORGANIZADOR CARBONES", "1"]
+      ]
+    }
+  },
+  {
+    "id": 74,
+    "name": "ACCESORIOS ELÉCTRICOS (RECEPTÁCULOS Y CLAVIJAS)",
+    "price": "$0.00",
+    "brand": "VARIOS",
+    "type": "Eléctrico",
+    "description": "Receptáculos dúplex, clavijas de vinil blindadas, apagadores y contactos colgantes.",
+    "images": ["assets/img/productos/info/ACCESORIOS ELÉCTRICOS.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Código", "Tipo/Color", "Clave", "Empaque"],
+      "rows": [
+        ["60606", "MARFIL", "M5250M (ARROW)", "10"],
+        ["60629", "MARFIL", "270V (ROYER)", "10"],
+        ["60671", "POLARIZADO", "TR 274 V", "100"],
+        ["60647", "AMARILLA", "2867-BOX (BLINDADA)", "10"],
+        ["60666", "AMARILLA", "2866-BOX (VINIL)", "10"],
+        ["60636", "BLANCO", "1301V (APAGADOR)", "10"],
+        ["60667", "BLANCO", "400W-BOX (CUBO 3 SAL.)", "25"],
+        ["60622", "NEGRO", "WD0504 (COLGANTE)", "200"],
+        ["60624", "BLANCA", "WD0565 (BISAGRA)", "100"]
+      ]
+    }
+  },
+  {
+    "id": 75,
+    "name": "ADHESIVOS E IMPERMEABILIZANTES CREST",
+    "price": "$0.00",
+    "brand": "CREST",
+    "type": "Construcción",
+    "description": "Línea completa de impermeabilizantes, selladores, cementos plásticos y adhesivos para pisos y azulejos.",
+    "images": ["assets/img/productos/info/ADHESIVOS E IMPERMEABILIZANTES CREST.jpg"],
+    "brandLogo": "",
+    "specifications": {
+      "headers": ["Código", "Tamaño", "Descripción/Tarima", "Garantía"],
+      "rows": [
+        ["62002", "19 LTS", "IMPERCREST BLANCO", "5 AÑOS"],
+        ["62004", "19 LTS", "SELLADOR IMPERCREST", "-"],
+        ["62005", "GALON", "CEMENTO PLÁSTICO", "-"],
+        ["62070", "20 KGS", "ADHESIVO CREST TOTAL", "100 BULT."],
+        ["62009", "10 KGS", "PISO SOBRE PISO", "50 BULT."],
+        ["62003", "19 L", "IMPERCREST FIBRATADO", "7 AÑOS"],
+        ["62008", "20 KGS", "ADHESIVO CREST BLANCO", "100 BULT."]
+      ]
+    }
   }
 
 
+
 ]
-
-
