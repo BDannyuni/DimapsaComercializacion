@@ -971,3 +971,39 @@ footer {
 .animated.fadeInLeft {
     animation: fadeInLeft 1s forwards;
 }
+
+#table-rows tr {
+    cursor: pointer;
+}
+
+#table-rows tr.selected {
+    background-color: #e6f2ff;
+    outline: 2px solid #007bff;
+}
+
+
+/* Burbuja roja del contador */
+.cart-count-badge {
+    padding: 2px;
+    font-size: 0.9rem; /* Texto más pequeño para que no estorbe */
+    font-weight: bold;
+    position: absolute;
+    min-width: 56px;
+    height: 56px;
+    justify-content: center;
+    pointer-events: none; /* Para que no interfiera con el click */
+}
+
+
+/* --- Si en lugar de icono de fuente usas IMAGEN (img), usa esto: --- */
+.cart-icon-img {
+    width: 22px; /* Ancho fijo igual al texto */
+    height: auto;
+    transition: filter 0.3s;
+}
+
+/* Invierte el color de la imagen a blanco en el hover */
+.nav-links li a:hover .cart-icon-img {
+    font-size: 22px !important; /* Tamaño controlado: ni muy chico ni muy grande */
+    color: #FFFFFF;
+}

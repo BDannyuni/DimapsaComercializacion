@@ -223,7 +223,7 @@ body {
 
 
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../img/Hero.avif');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../img/Hero-productos_dimapsa.avif');
     background-size: cover;
     background-position: center;
     height: 40vh;
