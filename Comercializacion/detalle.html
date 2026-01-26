@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dimapsa - Info Productos</title>
     <link rel="stylesheet" href="assets/css/detalle.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="assets/img/diseo_de_maquinas_y_proyectos_s_a_de_c_v_logo.jpg">
 </head>
@@ -36,6 +37,12 @@
         <li><a href="marcas.html">Marcas</a></li>
         <li><a href="https://api.whatsapp.com/send?phone=528182800775&text=Hola%21%20Quisiera%20más%20información%20sobre%20DIMAPSA%20Comercialización.">Contactanos</a></li> 
         <li><a href="../index.html">Dimapsa</a></li>
+        <li class="cart-nav-item">
+            <a href="carrito.html" class="cart-icon-link">
+                <span class="material-icons">shopping_cart</span>
+                <span id="nav-cart-count" class="cart-count-badge">0</span>
+            </a>
+        </li>
     </ul>
     <div class="menu-icon">
         <span>&#9776;</span>
@@ -83,6 +90,14 @@
             <tbody id="table-rows"></tbody>
         </table>
     </div>
+</div>
+<div class="cart-controls">
+    <div class="add-cart-container">
+    <button id="add-to-cart" class="btn btn-primary">
+        Agregar al carrito
+    </button>
+</div>
+
 </div>
     </div><br><br><br>
 
@@ -213,6 +228,8 @@
 <!-- SCRIPTS -->
     <script src="assets/scripts/scripts.js"></script>
 <script>
+    let selectedVariant = null;
+
     document.addEventListener('DOMContentLoaded', () => {
         const productId = localStorage.getItem('productId');
 
@@ -221,8 +238,9 @@
             .then(products => {
                 const product = products.find(p => p.id == productId);
                 if (product) {
+                    currentProduct = product;
+
                     document.getElementById('product-name').textContent = product.name;
-                    document.getElementById('product-price').textContent = `Precio: ${product.price}`;
                     document.getElementById('product-description').textContent = product.description;
                     document.getElementById('rating').textContent = product.rating;
 
@@ -259,16 +277,35 @@
                         tableHeaders.appendChild(th);
                     });
 
-                    const tableRows = document.getElementById('table-rows');
-                    product.specifications.rows.forEach(rowData => {
+                   const tableRows = document.getElementById('table-rows');
+
+                    product.specifications.rows.forEach((rowData, index) => {
                         const row = document.createElement('tr');
+                        row.dataset.index = index; // índice de la variante
+
                         rowData.forEach(cellData => {
                             const td = document.createElement('td');
                             td.textContent = cellData;
                             row.appendChild(td);
                         });
+
+                        // CLICK para seleccionar variante
+                        row.addEventListener('click', () => {
+                            document.querySelectorAll('#table-rows tr')
+                                .forEach(r => r.classList.remove('selected'));
+
+                            row.classList.add('selected');
+
+                            selectedVariant = {
+                                index,
+                                data: rowData
+                            };
+                            document.getElementById('add-to-cart').textContent = 'Agregar variante seleccionada';
+                        });
+
                         tableRows.appendChild(row);
-                    });
+                    }); 
+
                 }
             })
             .catch(error => console.error('Error al cargar los productos:', error));
@@ -408,5 +445,80 @@
     window.addEventListener('resize', adjustCarousel);
     adjustCarousel();
 </script>
+
+<script>
+/* --- Reemplaza el script del final de detalle.html con este --- */
+
+// Función para actualizar contador al cargar la página
+function updateCartCounterInitial() {
+    const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalCount = existingCart.reduce((acc, item) => acc + parseInt(item.quantity), 0);
+    const badge = document.getElementById('nav-cart-count'); // Asegúrate de agregar el ID al span del navbar
+    if(badge) badge.innerText = totalCount;
+}
+
+// Llamar al cargar
+document.addEventListener('DOMContentLoaded', updateCartCounterInitial);
+
+document.getElementById('add-to-cart').addEventListener('click', () => {
+
+    if (!selectedVariant) {
+        alert('Por favor selecciona una variante (haz clic en una fila de la tabla) antes de agregar al carrito');
+        return;
+    }
+
+    if (!currentProduct) {
+        alert('Error al cargar el producto');
+        return;
+    }
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // --- LÓGICA PARA DETECTAR DUPLICADOS ---
+    
+    // Buscamos si ya existe un item con el mismo ID y las MISMAS variantes
+    const existingItemIndex = cart.findIndex(item => {
+        // 1. Verificar ID
+        const isSameId = item.productId === currentProduct.id;
+        
+        // 2. Verificar Variantes (Comparamos los valores del array como strings JSON)
+        // Esto asume que item.variant.values es un array simple de strings/numeros
+        const isSameVariant = JSON.stringify(item.variant.values) === JSON.stringify(selectedVariant.data);
+        
+        return isSameId && isSameVariant;
+    });
+
+    if (existingItemIndex > -1) {
+        // CASO: El producto YA existe. Aumentamos cantidad.
+        cart[existingItemIndex].quantity += 1;
+        console.log("Cantidad aumentada para producto existente.");
+    } else {
+        // CASO: Es un producto nuevo (o variante nueva). Lo agregamos.
+        const productToAdd = {
+            productId: currentProduct.id,
+            name: currentProduct.name,
+            brand: currentProduct.brand,
+            image: currentProduct.images[0], // Guardamos la imagen principal
+            variant: {
+                headers: currentProduct.specifications.headers,
+                values: selectedVariant.data
+            },
+            quantity: 1
+        };
+        cart.push(productToAdd);
+        console.log("Nuevo producto agregado.");
+    }
+    
+    // Guardamos en LocalStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Opcional: Actualizar el contador visualmente antes de redirigir (si hubiera delay)
+    updateCartCounterInitial();
+
+    // Redirección
+    window.location.href = 'carrito.html';
+});
+</script>
+
 </body>
 </html>

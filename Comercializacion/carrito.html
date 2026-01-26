@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras | Dimapsa</title>
+    <link rel="stylesheet" href="assets/css/carrito.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.3.0/exceljs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo-container">
+        <a href="index.html" class="logo">
+            <img src="assets/img/diseo_de_maquinas_y_proyectos_s_a_de_c_v_logo.jpg" height="55px" alt="Dimapsa Logo">
+        </a>
+    </div>
+
+    <div class="search-container">
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Buscar Productos..." autocomplete="off">
+            <button type="submit" class="search-button">
+                <img src="assets/img/search.png" alt="Buscar" width="20">
+            </button>
+        </form>
+        <div id="autocomplete-list" class="autocomplete-items"></div>
+    </div>
+    
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="marcas.html">Marcas</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=528182800775">Contactanos</a></li> 
+        <li class="cart-nav-item">
+            <a href="carrito.html" class="cart-icon-link">
+                <span class="material-icons">shopping_cart</span>
+                <span id="nav-cart-count" class="cart-count-badge">0</span>
+            </a>
+        </li>
+    </ul>
+</nav> 
+
+<div class="header">
+    <h1>Resumen de Pedido</h1>
+</div>
+
+<div class="main-layout">
+    <div class="products-column">
+       <div class="quick-add-container" style="margin-bottom: 20px; background: #fff; padding: 20px; border: 1px solid #dcdde1; border-top: 5px solid #e74c3c; position: relative;">
+    <label style="font-weight: bold; color: #2c3e50;">Añadir Producto al Pedido:</label>
+    <div style="display: flex; gap: 10px; margin-top: 10px;">
+        <input type="text" id="internal-search-input" placeholder="Escriba el código o nombre del producto..." 
+               style="flex-grow: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" 
+               autocomplete="off" oninput="handleInternalSearch()">
+        <button type="button" class="btn-download" style="width: auto; padding: 0 20px;" onclick="addFirstResult()">AÑADIR</button>
+    </div>
+    <div id="internal-autocomplete-list" class="autocomplete-items"></div>
+    <div id="internal-feedback" style="margin-top: 8px; font-size: 0.9rem;"></div>
+</div>
+
+        <div id="cart-container"></div>
+    </div>
+
+    <aside class="actions-column">
+    <div class="summary-card">
+    <h2>Total del Pedido</h2>
+    <p id="total-items-text">Calculando...</p>
+    <hr>
+    
+    <div style="margin-bottom: 15px; text-align: left;">
+        <label style="font-weight: bold; font-size: 0.9rem;">Empresa Solicitante:</label>
+        <input type="text" id="client-company-name" placeholder="Nombre de su empresa" 
+               style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+
+    <button onclick="downloadCart()" class="btn-download">
+        <span class="material-icons">save_alt</span> Descargar PDF
+    </button>
+
+    <button onclick="downloadExcel()" class="btn-download" style="background-color: #27ae60; margin-top: 10px;">
+    <span class="material-icons">description</span> DESCARGAR EXCEL
+</button>
+</div>
+</aside>
+</div>
+
+<script>
+    // 1. ESTADO INICIAL
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const container = document.getElementById('cart-container');
+    const totalItemsText = document.getElementById('total-items-text');
+    const navCartCount = document.getElementById('nav-cart-count');
+
+    // 2. FUNCIONES DE RENDERIZADO
+    function updateNavbarCount() {
+        const totalCount = cart.reduce((acc, item) => acc + parseInt(item.quantity), 0);
+        navCartCount.innerText = totalCount;
+    }
+
+    function renderCart() {
+        container.innerHTML = ''; 
+        if (cart.length === 0) {
+            container.innerHTML = '<div class="empty-state"><h3>Tu carrito está vacío</h3></div>';
+            totalItemsText.innerText = "0 Artículos";
+            updateNavbarCount();
+            return;
+        }
+
+        cart.forEach((item, index) => {
+            const div = document.createElement('div');
+            div.classList.add('cart-item');
+            
+            // Buscar si existe la imagen, si no poner una por defecto
+            const itemImg = (item.image && item.image !== "undefined") ? item.image : (item.images ? item.images[0] : 'assets/img/no-image.jpg');
+
+            const variantsHtml = item.variant.headers.map((h, i) => 
+                `<li><span class="label">${h}:</span> ${item.variant.values[i]}</li>`
+            ).join('');
+
+            div.innerHTML = `
+                <div class="item-image"><img src="${itemImg}" width="80"></div>
+                <div class="item-details">
+                    <h3>${item.name}</h3>
+                    <ul class="specs-list">${variantsHtml}</ul>
+                </div>
+                <div class="item-controls">
+                    <input type="number" min="1" value="${item.quantity}" onchange="updateQuantity(${index}, this.value)" style="width:50px; text-align:center;">
+                </div>
+                <button class="btn-delete" onclick="removeItem(${index})"><span class="material-icons">delete</span></button>
+            `;
+            container.appendChild(div);
+        });
+
+        const totalQty = cart.reduce((acc, item) => acc + parseInt(item.quantity), 0);
+        totalItemsText.innerText = `${cart.length} Productos (${totalQty} Unidades)`;
+        updateNavbarCount();
+    }
+
+    // 3. ACCIONES DEL CARRITO
+    window.updateQuantity = function(index, newQuantity) {
+        cart[index].quantity = Math.max(1, parseInt(newQuantity));
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCart();
+    };
+
+    window.removeItem = function(index) {
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCart();
+    };
+
+    function addToCart(product) {
+        // Verificar si ya existe la misma variante
+        const existingIndex = cart.findIndex(item => 
+            item.name === product.name && 
+            JSON.stringify(item.variant.values) === JSON.stringify(product.variant.values)
+        );
+
+        if (existingIndex > -1) {
+            cart[existingIndex].quantity += 1;
+        } else {
+            cart.push(product);
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCart();
+    }
+
+    // 4. BUSCADOR RÁPIDO POR CÓDIGO (JSON COMPLETO)
+    async function quickAddToCart() {
+        const codeInput = document.getElementById('quick-code-input');
+        const codeToFind = codeInput.value.trim();
+        const feedback = document.getElementById('quick-search-feedback');
+        
+        if (!codeToFind) return;
+
+        try {
+            const response = await fetch('productos.json');
+            const allProducts = await response.json();
+            let found = false;
+
+            for (const product of allProducts) {
+                const codeIndex = product.specifications.headers.findIndex(h => h.toLowerCase().includes('codigo'));
+                if (codeIndex !== -1) {
+                    const rowMatch = product.specifications.rows.find(row => row[codeIndex] === codeToFind);
+                    if (rowMatch) {
+                        const newItem = {
+                            productId: product.id,
+                            name: product.name,
+                            image: product.images[0],
+                            variant: {
+                                headers: product.specifications.headers,
+                                values: rowMatch
+                            },
+                            quantity: 1
+                        };
+                        addToCart(newItem);
+                        feedback.innerHTML = `<span style="color: green;">✓ ${product.name} añadido.</span>`;
+                        codeInput.value = '';
+                        found = true;
+                        break;
+                    }
+                }
+            }
+            if (!found) feedback.innerHTML = `<span style="color: red;">× Código ${codeToFind} no encontrado.</span>`;
+        } catch (e) { console.error(e); }
+    }
+
+    // 5. GENERAR PDF
+    window.downloadCart = function() {
+    // 1. Validar que el carrito no esté vacío y que hayan puesto el nombre de su empresa
+    if (cart.length === 0) return alert("El carrito está vacío");
+    
+    const clientCompany = document.getElementById('client-company-name').value.trim();
+    if (!clientCompany) {
+        alert("Por favor, ingrese el nombre de la empresa que solicita el pedido.");
+        return;
+    }
+
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    
+    // Obtener la fecha actual para el reporte
+    const hoy = new Date();
+    const fechaTexto = hoy.toLocaleDateString();
+
+    // 2. ENCABEZADO Y LOGO
+    // Franja azul superior
+    doc.setFillColor(44, 62, 80);
+    doc.rect(0, 0, 210, 45, 'F');
+
+    // Logo (Asegúrate que la ruta sea correcta)
+    const logoUrl = 'assets/img/diseo_de_maquinas_y_proyectos_s_a_de_c_v_logo.jpg';
+    try {
+        doc.addImage(logoUrl, 'JPEG', 15, 8, 30, 30);
+    } catch (e) {
+        console.warn("No se pudo cargar el logo en el PDF");
+    }
+
+    // Título y Datos de DIMAPSA (Basados en tu documento oficial)
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(22);
+    doc.text("ORDEN DE PEDIDO", 50, 20);
+    
+    doc.setFontSize(10);
+    doc.text("DIMAPSA - Diseño de Máquinas y Proyectos S.A. de C.V.", 50, 28);
+    doc.text("José Ma. Bocanegra No. 1313, Col. Industrial", 50, 33);
+    doc.text("Monterrey, N.L., México | home@dimapsa.com", 50, 38);
+
+    // 3. INFORMACIÓN DEL CLIENTE
+    doc.setTextColor(40, 40, 40);
+    doc.setFontSize(11);
+    doc.setFont("helvetica", "bold");
+    doc.text("SOLICITADO POR:", 15, 55);
+    doc.setFont("helvetica", "normal");
+    doc.text(clientCompany, 55, 55);
+    
+    doc.setFont("helvetica", "bold");
+    doc.text("FECHA DE EMISIÓN:", 15, 62);
+    doc.setFont("helvetica", "normal");
+    doc.text(fechaTexto, 55, 62);
+
+    // 4. TABLA DE PRODUCTOS
+    const tableRows = [];
+    cart.forEach(item => {
+        // Buscamos el valor de la columna "Codigo" dentro de las especificaciones
+        const codeIndex = item.variant.headers.findIndex(h => h.toLowerCase().includes('codigo'));
+        const codigoReal = codeIndex !== -1 ? item.variant.values[codeIndex] : "N/A";
+
+        // Creamos el texto de especificaciones sin repetir el código
+        const specsText = item.variant.headers
+            .map((h, i) => i !== codeIndex ? `${h}: ${item.variant.values[i]}` : null)
+            .filter(v => v !== null)
+            .join('\n');
+
+        tableRows.push([
+            codigoReal,     // Columna Código (ej: 00872)
+            item.name,      // Nombre del producto
+            specsText,      // Detalles (Medida, Empaque...)
+            item.quantity   // Cantidad solicitada
+        ]);
+    });
+
+    doc.autoTable({
+        startY: 70,
+        head: [['CÓDIGO', 'PRODUCTO', 'ESPECIFICACIONES', 'CANT.']],
+        body: tableRows,
+        headStyles: { fillColor: [252, 24, 23], textColor: [255, 255, 255] }, // Rojo de Dimapsa
+        styles: { fontSize: 9, cellPadding: 3 },
+        columnStyles: {
+            0: { cellWidth: 25, fontStyle: 'bold' },
+            3: { cellWidth: 20, halign: 'center' }
+        }
+    });
+
+    // 5. PIE DE PÁGINA
+    const finalY = doc.lastAutoTable.finalY + 10;
+    doc.setFontSize(9);
+    doc.setTextColor(100);
+    doc.text("Este documento es una solicitud de cotización.", 15, finalY);
+    doc.text("Gracias por su preferencia.", 15, finalY + 5);
+
+    // Guardar el PDF con el nombre de la empresa y fecha
+    doc.save(`Pedido_${clientCompany.replace(/ /g, '_')}_${fechaTexto.replace(/\//g, '-')}.pdf`);
+};
+</script>
+
+<script>
+window.downloadExcel = async function() {
+    if (cart.length === 0) return alert("El carrito está vacío");
+    
+    const clientCompany = document.getElementById('client-company-name').value.trim();
+    if (!clientCompany) {
+        alert("Por favor, ingrese el nombre de la empresa solicitante.");
+        return;
+    }
+
+    const workbook = new ExcelJS.Workbook();
+    const worksheet = workbook.addWorksheet('Pedido Dimapsa');
+
+    // 1. INSERTAR LOGO
+    try {
+        const response = await fetch('assets/img/diseo_de_maquinas_y_proyectos_s_a_de_c_v_logo.jpg');
+        const blob = await response.blob();
+        const arrayBuffer = await blob.arrayBuffer();
+        const logoId = workbook.addImage({
+            buffer: arrayBuffer,
+            extension: 'jpeg',
+        });
+        worksheet.addImage(logoId, 'A1:A4'); // Ubica el logo en las primeras celdas
+    } catch (e) {
+        console.warn("No se pudo cargar el logo en el Excel");
+    }
+
+    // 2. DATOS DE LA EMPRESA (DIMAPSA)
+    // Nombre de la empresa [cite: 3]
+    worksheet.mergeCells('B1:D1');
+    const title = worksheet.getCell('B1');
+    title.value = "DIMAPSA - Diseño de Máquinas y Proyectos S.A. de C.V.";
+    title.font = { name: 'Arial', size: 14, bold: true, color: { argb: 'FF2C3E50' } };
+
+    // Dirección y contacto [cite: 4]
+    worksheet.mergeCells('B2:D2');
+    worksheet.getCell('B2').value = "José Ma. Bocanegra No. 1313, Col. Industrial, Monterrey, N.L.";
+    
+    worksheet.mergeCells('B3:D3');
+    worksheet.getCell('B3').value = "Email: home@dimapsa.com | Fecha: " + new Date().toLocaleDateString();
+
+    worksheet.mergeCells('B4:D4');
+    worksheet.getCell('B4').value = "SOLICITADO POR: " + clientCompany;
+    worksheet.getCell('B4').font = { bold: true };
+
+    // 3. ENCABEZADOS DE LA TABLA 
+    const headerRow = worksheet.getRow(6);
+    headerRow.values = ['CÓDIGO', 'PRODUCTO', 'ESPECIFICACIONES', 'CANT.'];
+    
+    // Estilo de encabezados (Fondo Rojo, Texto Blanco)
+    headerRow.eachCell((cell) => {
+        cell.fill = {
+            type: 'pattern',
+            pattern: 'solid',
+            fgColor: { argb: 'FFFC1817' } // Rojo oficial
+        };
+        cell.font = { color: { argb: 'FFFFFFFF' }, bold: true };
+        cell.alignment = { vertical: 'middle', horizontal: 'center' };
+        cell.border = { outline: true };
+    });
+
+    // 4. AGREGAR PRODUCTOS DEL CARRITO
+    cart.forEach((item, index) => {
+        // Buscar el código real en las especificaciones 
+        const codeIdx = item.variant.headers.findIndex(h => h.toLowerCase().includes('codigo'));
+        const codigoReal = codeIdx !== -1 ? item.variant.values[codeIdx] : "N/A";
+
+        const specs = item.variant.headers
+            .map((h, i) => i !== codeIdx ? `${h}: ${item.variant.values[i]}` : null)
+            .filter(v => v)
+            .join(' | ');
+
+        const row = worksheet.addRow([
+            codigoReal,
+            item.name,
+            specs,
+            item.quantity
+        ]);
+
+        // Estilo de las celdas de datos
+        row.eachCell((cell) => {
+            cell.alignment = { vertical: 'middle', wrapText: true };
+            cell.border = { top: {style:'thin'}, left: {style:'thin'}, bottom: {style:'thin'}, right: {style:'thin'} };
+        });
+    });
+
+    // 5. AJUSTAR ANCHOS DE COLUMNA
+    worksheet.getColumn(1).width = 15;
+    worksheet.getColumn(2).width = 35;
+    worksheet.getColumn(3).width = 50;
+    worksheet.getColumn(4).width = 10;
+
+    // 6. DESCARGAR ARCHIVO
+    const buffer = await workbook.xlsx.writeBuffer();
+    saveAs(new Blob([buffer]), `Pedido_${clientCompany.replace(/ /g, '_')}.xlsx`);
+};
+</script>
+
+
+<script>
+    let catalog = []; // Para guardar los productos del JSON
+
+// Cargar el catálogo al iniciar la página
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch('assets/scripts/productos.json');
+        catalog = await response.json();
+        renderCart(); // Aseguramos que el carrito se pinte al cargar
+    } catch (error) {
+        console.error('Error cargando el catálogo:', error);
+    }
+});
+
+function handleInternalSearch() {
+    const input = document.getElementById('internal-search-input');
+    const filter = input.value.toLowerCase();
+    const autocompleteList = document.getElementById('internal-autocomplete-list');
+    
+    autocompleteList.innerHTML = ''; // Limpiar sugerencias
+    if (!filter) return;
+
+    let matches = [];
+
+    catalog.forEach(product => {
+        // 1. Buscar en el nombre o descripción
+        const matchGeneral = product.name.toLowerCase().includes(filter);
+
+        // 2. Buscar en las especificaciones (específicamente la columna de Código)
+        const codeIndex = product.specifications.headers.findIndex(h => h.toLowerCase().includes('codigo'));
+        
+        product.specifications.rows.forEach(row => {
+            const codeValue = row[codeIndex] ? row[codeIndex].toString().toLowerCase() : "";
+            
+            if (codeValue.includes(filter) || matchGeneral) {
+                matches.push({
+                    product: product,
+                    row: row,
+                    code: row[codeIndex] || "S/C"
+                });
+            }
+        });
+    });
+
+    // Limitar a 10 resultados para no saturar la pantalla
+    matches.slice(0, 10).forEach(match => {
+        const suggestion = document.createElement('div');
+        suggestion.style.padding = "10px";
+        suggestion.style.cursor = "pointer";
+        suggestion.innerHTML = `<strong>${match.code}</strong> - ${match.product.name} <small>(${match.row[1] || ""})</small>`;
+        
+        // Al hacer clic, se añade directamente al carrito
+        suggestion.onclick = () => {
+            selectForCart(match);
+            autocompleteList.innerHTML = '';
+            input.value = '';
+        };
+        autocompleteList.appendChild(suggestion);
+    });
+}
+
+function selectForCart(match) {
+    const newItem = {
+        productId: match.product.id,
+        name: match.product.name,
+        image: match.product.images[0],
+        variant: {
+            headers: match.product.specifications.headers,
+            values: match.row
+        },
+        quantity: 1
+    };
+    
+    // Llamamos a la función addToCart que ya maneja el localStorage y renderizado
+    addToCart(newItem);
+    
+    const feedback = document.getElementById('internal-feedback');
+    feedback.innerHTML = `<span style="color: green;">✓ ${match.product.name} (${match.code}) añadido.</span>`;
+    setTimeout(() => feedback.innerHTML = '', 3000);
+}
+
+// Función para añadir el primer resultado si presionan el botón "Añadir" manualmente
+function addFirstResult() {
+    const list = document.getElementById('internal-autocomplete-list');
+    if (list.firstChild) {
+        list.firstChild.click();
+    }
+}
+</script>
+</body>
+</html>
